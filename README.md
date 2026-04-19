@@ -10,7 +10,7 @@ New on-edge multi-modal advancements such as Gemma and Cactus make this possible
 
 ## 🌟 The Problem
 
-Generic LLMs don't know you. They require constant prompting, can't learn from your context, and can't distinguish signal from noise in your daily life. Most AI assistants are one-size-fits-all tools that forget you after each conversation.
+Problem:  Generic LLMs do not know you. Constant prompting is inefficient and exhausting. Most of your life context is a signal hidden inside noise.
 
 ## 💡 The Solution
 
