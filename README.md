@@ -13,6 +13,7 @@ Generic LLMs don't know you. They require constant prompting, can't learn from y
 - **Learns continuously**: Captures and processes video, audio, and context from your daily life
 - **Runs on-device**: Uses Gemma 4 on Cactus for real-time multimodal processing
 - **Builds a living knowledge base**: Automatically extracts concepts and generates structured wiki articles
+- **BPruning through Cosine Similarities and Engagement Scores**
 - **Understands you**: Every interaction becomes more relevant, useful, and personal
 
 Whether you're coding, researching, or managing three kids, Twin Mind captures what matters even in noisy, messy environments.
@@ -20,6 +21,13 @@ Whether you're coding, researching, or managing three kids, Twin Mind captures w
 ---
 
 ## 🏗️ Architecture
+
+![Architecture diagram - Memory Layer](memory_layer.png)
+
+![Architecture diagram - Agent Layer](agent_layer.png)
+
+![Architecture diagram - Final Product](product.png)
+
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -92,10 +100,15 @@ Whether you're coding, researching, or managing three kids, Twin Mind captures w
 - Tool-calling system for structured retrieval
 
 ### 5. **Living Knowledge Base**
-- Auto-updated wiki index
+- Auto-updated wiki index or knowledge graphs 
 - Session summaries with timestamps
 - Continuous learning from daily interactions
 - Supports existing markdown/knowledge graphs as starting state
+
+![Example of Knowledge Graphs](kg.png)
+
+### 6. Hybrid Routing
+- From our previous hackathon: https://github.com/sneha-cornell/warriors_function_gemma
 
 ---
 
