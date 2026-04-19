@@ -11,6 +11,7 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import sys
 
@@ -88,6 +89,19 @@ def main():
         print("New articles added to knowledge base:")
         for title, filename, _ in new_articles:
             print(f"  - {title} ({filename})")
+
+    # 6. Save session summary for agent queries
+    summary_path = os.path.join(session_dir, "summary.json")
+    summary_data = {
+        "timestamp": timestamp,
+        "transcript": transcript,
+        "visual_summary": session["visual_summary"],
+        "observations": observations,
+        "new_articles": list(new_articles) if new_articles else [],
+    }
+    with open(summary_path, "w") as f:
+        json.dump(summary_data, f, indent=2)
+    print(f"\nSession summary saved: {summary_path}")
 
     cactus_index_destroy(index)
     cactus_destroy(model)
