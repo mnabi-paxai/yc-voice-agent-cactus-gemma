@@ -76,7 +76,7 @@ def main():
     args = parse_args()
 
     weights_path = os.path.join(BASE_DIR, "cactus", "weights", "gemma-4-e2b-it")
-    data_dir = os.path.join(BASE_DIR, "Data")
+    data_dir = os.path.join(BASE_DIR, "data")
 
     print("Loading Gemma 4 on Cactus...\n")
     model = cactus_init(weights_path, None, False)
