@@ -46,8 +46,8 @@ from cactus import (
     cactus_index_compact,
 )
 
-SIM_THRESHOLD = 0.3   # minimum semantic similarity to be a candidate
-ENGAGEMENT_DECAY = 0.1  # recency decay rate per day
+DIVERSITY_THRESHOLD = 0.9  # drop retrieved articles too similar to each other
+ENGAGEMENT_DECAY = 0.1     # recency decay rate per day
 
 
 # ---------------------------------------------------------------------------
@@ -289,25 +289,65 @@ def stop_file_watcher(watcher):
 # Retrieval + scoring
 # ---------------------------------------------------------------------------
 
-def retrieve_and_score(model, index, query_text, data_dir,
-                       top_k=5, sim_threshold=SIM_THRESHOLD):
+CROSS_SIM_HIGH = 0.85   # above this = file is redundant with the wiki
+ENGAGEMENT_LOW  = 0.1   # below this = file has never meaningfully been read
+
+def _cosine_sim(a, b):
+    dot = sum(x * y for x, y in zip(a, b))
+    norm_a = sum(x * x for x in a) ** 0.5
+    norm_b = sum(x * x for x in b) ** 0.5
+    return dot / (norm_a * norm_b) if norm_a and norm_b else 0.0
+
+
+def compute_cross_similarities(model, data_dir):
     """
-    1. Embed query and retrieve candidate files from vector index
-    2. Trim candidates below sim_threshold
-    3. Rank remaining by engagement_score (time-decayed access frequency)
-    4. Log accessed files for future scoring
+    For every .md file in data_dir, compute its average cosine similarity
+    with every other .md file. Returns {filename: avg_cross_sim}.
+
+    This is a global property of the wiki — how redundant each file is
+    relative to the whole corpus.
+    """
+    files = [f for f in sorted(Path(data_dir).glob("*.md")) if f.name != "index.md"]
+    if not files:
+        return {}
+
+    embeddings = {}
+    for f in files:
+        text = f.read_text()[:3000]  # cap to avoid huge embeds
+        embeddings[f.name] = cactus_embed(model, text, True)
+
+    names = list(embeddings.keys())
+    cross_sims = {}
+    for name in names:
+        others = [embeddings[other] for other in names if other != name]
+        if not others:
+            cross_sims[name] = 0.0
+        else:
+            cross_sims[name] = sum(_cosine_sim(embeddings[name], o) for o in others) / len(others)
+
+    return cross_sims
+
+
+def retrieve_and_score(model, index, query_text, data_dir, top_k=4):
+    """
+    1. Embed query, retrieve candidate sections from vector index
+    2. Deduplicate sections to file level (keep best-matching section per file)
+    3. For each candidate: compute avg cosine sim with every other wiki file
+    4. Score = avg_cross_sim + engagement
+    5. Drop files where avg_cross_sim > CROSS_SIM_HIGH and engagement < ENGAGEMENT_LOW
+       (redundant files that nobody reads)
+    6. Rank by score, return top_k
+    7. Log accessed files
     """
     query_emb = cactus_embed(model, query_text, True)
-    raw = cactus_index_query(index, query_emb, json.dumps({"top_k": top_k * 3}))
+    raw = cactus_index_query(index, query_emb, json.dumps({"top_k": top_k * 4}))
     results = json.loads(raw)["results"]
 
     access_log = _load_access_log(data_dir)
 
-    # collect best semantic_sim per file across all matching sections
+    # deduplicate sections → file level
     best_per_file = {}
     for r in results:
-        if r["score"] < sim_threshold:
-            continue
         doc_raw = json.loads(cactus_index_get(index, [r["id"]]))["results"][0]
         filename = doc_raw.get("metadata", "unknown")
         if filename not in best_per_file or r["score"] > best_per_file[filename]["semantic_sim"]:
@@ -318,9 +358,25 @@ def retrieve_and_score(model, index, query_text, data_dir,
                 "engagement": _engagement_score(access_log.get(filename, [])),
             }
 
-    ranked = sorted(best_per_file.values(), key=lambda x: x["engagement"], reverse=True)[:top_k]
+    # compute avg cross-similarity for each candidate against the full wiki
+    cross_sims = compute_cross_similarities(model, data_dir)
 
-    # log this retrieval as an access event
+    scored = []
+    for c in best_per_file.values():
+        avg_cross_sim = cross_sims.get(c["filename"], 0.0)
+        engagement = c["engagement"]
+
+        # drop: redundant with wiki AND never read
+        if avg_cross_sim > CROSS_SIM_HIGH and engagement < ENGAGEMENT_LOW:
+            print(f"  Dropped {c['filename']} (cross_sim={avg_cross_sim:.2f}, engagement={engagement:.3f})")
+            continue
+
+        c["avg_cross_sim"] = avg_cross_sim
+        c["score"] = engagement
+        scored.append(c)
+
+    ranked = sorted(scored, key=lambda x: x["score"], reverse=True)[:top_k]
+
     today = datetime.now().strftime("%Y-%m-%d")
     _log_access(data_dir, [r["filename"] for r in ranked], today)
 
@@ -460,7 +516,7 @@ def learn_from_session(model, transcript, visual_summary, timestamp, data_dir,
         existing_articles = [(s["filename"].replace(".md", "").replace("-", " ").title(),
                               s["filename"]) for s in scored]
         for s in scored:
-            print(f"  {s['filename']}  sim={s['semantic_sim']:.2f}  engagement={s['engagement']:.3f}")
+            print(f"  {s['filename']}  cross_sim={s.get('avg_cross_sim', 0):.2f}  engagement={s['engagement']:.3f}  score={s.get('score', 0):.3f}")
         print()
     else:
         _, existing_articles = read_existing_index(data_dir)
