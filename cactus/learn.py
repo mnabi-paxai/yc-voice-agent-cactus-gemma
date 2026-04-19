@@ -56,14 +56,35 @@ def _parse_timestamp(text):
     return match.group(1) if match else "unknown"
 
 
+def _indexed_log_path(data_dir):
+    return os.path.join(data_dir, "vector_index", "indexed.json")
+
+
+def _load_indexed(data_dir):
+    path = _indexed_log_path(data_dir)
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)  # {filename: doc_id_start}
+    return {}
+
+
+def _save_indexed(data_dir, indexed):
+    with open(_indexed_log_path(data_dir), "w") as f:
+        json.dump(indexed, f)
+
+
 def build_wiki_index(model, index, data_dir):
-    """Embed all existing wiki articles into the vector index. Returns next doc_id."""
-    doc_id = 0
+    """Embed only new wiki articles — skips files already in the index log."""
+    indexed = _load_indexed(data_dir)
+    doc_id = sum(indexed.values()) if indexed else 0
+
+    new_count = 0
     for filepath in sorted(Path(data_dir).glob("*.md")):
-        if filepath.name == "index.md":
+        if filepath.name == "index.md" or filepath.name in indexed:
             continue
         text = filepath.read_text()
         timestamp = _parse_timestamp(text)
+        start_id = doc_id
         for section in chunk_markdown(text):
             emb = cactus_embed(model, section, True)
             cactus_index_add(
@@ -71,22 +92,34 @@ def build_wiki_index(model, index, data_dir):
                 [f"{filepath.name}|{timestamp}"]
             )
             doc_id += 1
-    cactus_index_compact(index)
-    print(f"  Indexed {doc_id} sections from existing wiki articles")
+        indexed[filepath.name] = doc_id - start_id
+        new_count += 1
+
+    if new_count:
+        cactus_index_compact(index)
+        _save_indexed(data_dir, indexed)
+
+    skipped = len(indexed) - new_count
+    print(f"  Indexed {new_count} new articles ({skipped} already cached)")
     return doc_id
 
 
-def add_article_to_index(model, index, doc_id, filepath, timestamp):
-    """Embed a newly written article and add it to the index."""
+def add_article_to_index(model, index, doc_id, filepath, timestamp, data_dir):
+    """Embed a newly written article, add to index, and update the indexed log."""
+    filename = os.path.basename(filepath)
     text = Path(filepath).read_text()
+    start_id = doc_id
     for section in chunk_markdown(text):
         emb = cactus_embed(model, section, True)
         cactus_index_add(
             index, [doc_id], [section], [emb],
-            [f"{os.path.basename(filepath)}|{timestamp}"]
+            [f"{filename}|{timestamp}"]
         )
         doc_id += 1
     cactus_index_compact(index)
+    indexed = _load_indexed(data_dir)
+    indexed[filename] = doc_id - start_id
+    _save_indexed(data_dir, indexed)
     return doc_id
 
 
@@ -311,7 +344,7 @@ def learn_from_session(model, transcript, visual_summary, timestamp, data_dir,
         # add new article to vector index immediately
         if index:
             filepath = os.path.join(data_dir, filename)
-            doc_id = add_article_to_index(model, index, doc_id, filepath, timestamp)
+            doc_id = add_article_to_index(model, index, doc_id, filepath, timestamp, data_dir)
 
     if new_entries:
         update_index(data_dir, new_entries)
