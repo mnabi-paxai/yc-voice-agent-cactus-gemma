@@ -1,5 +1,7 @@
 # Twin Mind: Your Digital Mind That Learns From Life
 
+![Banner Name](images/banner.png)
+
 > A personalized AI that learns from your daily life—capturing video, audio, and context to build a living knowledge base that grows with you.
 
 ## 🌟 The Problem
