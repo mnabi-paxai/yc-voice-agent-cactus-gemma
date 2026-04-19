@@ -37,7 +37,7 @@ Whether you're coding, researching, or managing three kids, Twin Mind captures w
 │                                                               │
 │  Learning Layer (learn.py)                                   │
 │  ├─ Concept extraction                                       │
-│  ├─ Wiki article generation                                  │
+│  ├─ Wiki article generation or  knowledge graphs                                │
 │  ├─ Vector embedding index                                   │
 │  ├─ Engagement scoring                                       │
 │  └─ File watcher (tracks user interaction)                   │
@@ -47,7 +47,7 @@ Whether you're coding, researching, or managing three kids, Twin Mind captures w
 │  ├─ Tool-calling system                                      │
 │  └─ Reflection & insights                                    │
 │                                                               │
-│  Knowledge Layer (tools.py)                                  │
+│  Tools Layer (tools.py)                                  │
 │  └─ 7 cognitive tools:                                       │
 │     • overview  - Scan all knowledge                         │
 │     • focus     - Deep dive into concepts                    │
