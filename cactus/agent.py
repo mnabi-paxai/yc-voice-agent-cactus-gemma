@@ -36,7 +36,7 @@ except ImportError:
 SAMPLE_RATE = 16000
 
 ASK_TOOLS = [t for t in TOOL_DEFINITIONS if t["function"]["name"] in (
-    "overview", "focus", "search", "recognize", "rewind", "reflect",
+    "search", "focus", "overview", "recognize", "reflect",
 )]
 REFLECT_TOOLS = [t for t in TOOL_DEFINITIONS if t["function"]["name"] in (
     "overview", "focus", "search", "reflect",
@@ -49,9 +49,10 @@ SYSTEM_PROMPTS = {
     "ask": (
         "You are Twin Mind, a personal knowledge assistant. "
         "Answer the user's question using ONLY information from the knowledge base. "
-        "Use the available tools to search and read articles before answering. "
+        "To find information, first use the 'search' tool with relevant keywords, "
+        "then use the 'focus' tool to read the full article. "
         "If the information is not in the knowledge base, say so honestly. "
-        "Be concise and specific — cite which article the information came from."
+        "Be concise and specific."
     ),
     "reflect": (
         "You are Twin Mind's reflection engine. "
@@ -121,8 +122,7 @@ def speak(text):
     subprocess.run(["say", clean])
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Twin Mind Agent — your second brain")
+def _add_voice_flags(parser):
     parser.add_argument("--voice", action="store_true",
                         help="Use microphone for input instead of text")
     parser.add_argument("--speak", action="store_true",
@@ -130,18 +130,24 @@ def parse_args():
     parser.add_argument("--listen-duration", type=int, default=5,
                         help="Seconds to listen for voice input (default: 5)")
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Twin Mind Agent — your second brain")
     subparsers = parser.add_subparsers(dest="mode", required=True)
 
     ask_parser = subparsers.add_parser("ask", help="Ask a question about your knowledge")
     ask_parser.add_argument("question", nargs="?", default=None, help="Your question")
+    _add_voice_flags(ask_parser)
 
-    subparsers.add_parser("reflect", help="Find patterns and gaps across all knowledge")
+    reflect_parser = subparsers.add_parser("reflect", help="Find patterns and gaps across all knowledge")
+    _add_voice_flags(reflect_parser)
 
     companion_parser = subparsers.add_parser("companion", help="Get insights after a session")
     companion_parser.add_argument(
         "--session", default="latest",
         help="Session ID or 'latest' (default: latest)",
     )
+    _add_voice_flags(companion_parser)
 
     return parser.parse_args()
 
