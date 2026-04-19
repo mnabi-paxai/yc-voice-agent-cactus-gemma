@@ -22,11 +22,11 @@ Whether you're coding, researching, or managing three kids, Twin Mind captures w
 
 ## 🏗️ Architecture
 
-![Architecture diagram - Memory Layer](memory_layer.png)
+![Architecture diagram - Memory Layer](images/memory_layer.png)
 
-![Architecture diagram - Agent Layer](agent_layer.png)
+![Architecture diagram - Agent Layer](images/agent_layer.png)
 
-![Architecture diagram - Final Product](product.png)
+![Architecture diagram - Final Product](images/product.png)
 
 
 ```
@@ -105,7 +105,7 @@ Whether you're coding, researching, or managing three kids, Twin Mind captures w
 - Continuous learning from daily interactions
 - Supports existing markdown/knowledge graphs as starting state
 
-![Example of Knowledge Graphs](kg.png)
+![Example of Knowledge Graphs](/images/kg.png)
 
 ### 6. Hybrid Routing
 - From our previous hackathon: https://github.com/sneha-cornell/warriors_function_gemma
