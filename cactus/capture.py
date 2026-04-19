@@ -76,6 +76,7 @@ def record_live(duration_sec, session_dir, frames_dir):
     print("  Camera ready")
 
     frame_paths = []
+    all_frames = []
     start = time.time()
     last_capture = 0
 
@@ -83,6 +84,7 @@ def record_live(duration_sec, session_dir, frames_dir):
         ret, frame = cap.read()
         if not ret:
             continue
+        all_frames.append(frame)
         elapsed = time.time() - start
         if elapsed - last_capture >= FRAME_INTERVAL_SEC:
             path = save_frame(frame, frames_dir, len(frame_paths))
@@ -92,6 +94,17 @@ def record_live(duration_sec, session_dir, frames_dir):
 
     cap.release()
     audio_thread.join()
+
+    if all_frames:
+        video_path = os.path.join(session_dir, "video.mp4")
+        fps = len(all_frames) / duration_sec
+        h, w = all_frames[0].shape[:2]
+        fourcc = cv2.VideoWriter_fourcc(*"avc1")
+        writer = cv2.VideoWriter(video_path, fourcc, fps, (w, h))
+        for f in all_frames:
+            writer.write(f)
+        writer.release()
+        print(f"  Video saved: {video_path}")
 
     audio_path = None
     if AUDIO_AVAILABLE and audio_data:

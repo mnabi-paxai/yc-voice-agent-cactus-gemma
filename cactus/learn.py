@@ -92,10 +92,17 @@ def _save_indexed(data_dir, indexed):
         json.dump(indexed, f)
 
 
+def _next_doc_id(indexed):
+    """Calculate the next safe doc_id from the indexed log."""
+    if not indexed:
+        return 0
+    return sum(indexed.values())
+
+
 def build_wiki_index(model, index, data_dir):
     """Embed wiki articles by section. Skips already-indexed files."""
     indexed = _load_indexed(data_dir)
-    doc_id = sum(indexed.values()) if indexed else 0
+    doc_id = _next_doc_id(indexed)
 
     new_count = 0
     for filepath in sorted(Path(data_dir).glob("*.md")):
@@ -197,7 +204,7 @@ class _AtimePoller(threading.Thread):
     def __init__(self, data_dir):
         super().__init__(daemon=True)
         self._data_dir = data_dir
-        self._stop = threading.Event()
+        self._stop_event = threading.Event()
         self._lock = threading.Lock()
         self._atimes = self._snapshot()
 
@@ -213,7 +220,7 @@ class _AtimePoller(threading.Thread):
         return result
 
     def run(self):
-        while not self._stop.wait(_ATIME_POLL_INTERVAL):
+        while not self._stop_event.wait(_ATIME_POLL_INTERVAL):
             current = self._snapshot()
             today = datetime.now().strftime("%Y-%m-%d")
             accessed = [
@@ -226,8 +233,8 @@ class _AtimePoller(threading.Thread):
             self._atimes = current
 
     def stop(self):
-        self._stop.set()
-        self.join()
+        self._stop_event.set()
+        self.join(timeout=2)
 
 
 if _WATCHDOG_AVAILABLE:
@@ -348,12 +355,16 @@ def retrieve_and_score(model, index, query_text, data_dir, top_k=4):
     # deduplicate sections → file level
     best_per_file = {}
     for r in results:
-        doc_raw = json.loads(cactus_index_get(index, [r["id"]]))["results"][0]
+        try:
+            raw_str = cactus_index_get(index, [r["id"]])
+            doc_raw = json.loads(raw_str, strict=False)["results"][0]
+        except (json.JSONDecodeError, IndexError, KeyError):
+            continue
         filename = doc_raw.get("metadata", "unknown")
         if filename not in best_per_file or r["score"] > best_per_file[filename]["semantic_sim"]:
             best_per_file[filename] = {
                 "filename": filename,
-                "text": doc_raw["document"],
+                "text": doc_raw.get("document", ""),
                 "semantic_sim": r["score"],
                 "engagement": _engagement_score(access_log.get(filename, [])),
             }

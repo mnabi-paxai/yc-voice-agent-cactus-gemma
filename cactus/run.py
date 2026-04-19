@@ -69,8 +69,9 @@ def main():
     # 2. Transcribe
     transcript = transcribe_audio(model, audio_path)
 
-    # 3. Analyze frames
-    observations = analyze_frames(model, frame_paths, transcript)
+    # 3. Analyze frames (skipped — using transcript + single frame summary)
+    # observations = analyze_frames(model, frame_paths, transcript)
+    observations = []
 
     # 4. Summarize
     session = summarize_session(transcript, observations)
