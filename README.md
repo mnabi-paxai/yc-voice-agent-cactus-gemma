@@ -1,4 +1,4 @@
-# Twin Mind: Your Digital Mind That Learns From Life
+# Twin Mind: Your Digital Mind That Learns From Your Every Day Lives Interactions
 
 ![Banner Name](images/banner.png)
 
