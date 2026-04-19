@@ -8,7 +8,7 @@ until the model produces a final text response.
 import json
 
 from cactus import cactus_complete
-from tools import TOOL_DEFINITIONS, execute_tool
+from tools import execute_tool
 
 MAX_ITERATIONS = 5
 
@@ -32,55 +32,22 @@ def _parse_function_call(fc):
     return name, args
 
 
-def run_agent(model, system_prompt, user_message, data_dir, base_dir):
-    """Run the agent loop until a final text response or max iterations."""
+def run_agent(model, system_prompt, user_message, data_dir, base_dir, tools=None):
+    """Run the agent loop: tool calls until the model gives a text answer."""
+    from tools import TOOL_DEFINITIONS
+    tool_defs = tools if tools is not None else TOOL_DEFINITIONS
+    tools_json = json.dumps(tool_defs)
+
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_message},
     ]
 
-    tools_json = json.dumps(TOOL_DEFINITIONS)
-    tool_results_collected = []
-
     for iteration in range(MAX_ITERATIONS):
-        is_final_turn = len(tool_results_collected) > 0
+        options = {"max_tokens": 512, "temperature": 0.0}
 
-        if is_final_turn:
-            # After collecting tool results, ask the model to answer without tools
-            context = "\n\n".join(
-                f"[{r['tool']}] {r['content']}" for r in tool_results_collected
-            )
-            answer_messages = [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": (
-                    f"{user_message}\n\n"
-                    f"Here is the information from the knowledge base:\n\n"
-                    f"{context}\n\n"
-                    f"Based on this information, answer the question concisely."
-                )},
-            ]
-            options = {"max_tokens": 512, "temperature": 0.0}
-            response_raw = cactus_complete(
-                model,
-                json.dumps(answer_messages),
-                json.dumps(options),
-                None,
-                None,
-            )
-            try:
-                result = json.loads(response_raw)
-                return result.get("response", "").strip()
-            except json.JSONDecodeError:
-                return response_raw
-
-        # Tool-calling turn
-        options = {"max_tokens": 512, "temperature": 0.0, "force_tools": True}
         response_raw = cactus_complete(
-            model,
-            json.dumps(messages),
-            json.dumps(options),
-            tools_json,
-            None,
+            model, json.dumps(messages), json.dumps(options), tools_json, None,
         )
 
         try:
@@ -89,14 +56,10 @@ def run_agent(model, system_prompt, user_message, data_dir, base_dir):
             return response_raw
 
         function_calls = result.get("function_calls", [])
+        text_response = result.get("response", "").replace("<|tool_call>", "").strip()
 
         if not function_calls:
-            text = result.get("response", "").replace("<|tool_call>", "").strip()
-            if text:
-                return text
-            # No tool calls and no text — force a direct answer
-            tool_results_collected.append({"tool": "note", "content": "No tools were called."})
-            continue
+            return text_response
 
         for fc in function_calls:
             name, args = _parse_function_call(fc)
@@ -112,7 +75,12 @@ def run_agent(model, system_prompt, user_message, data_dir, base_dir):
                 model=model,
             )
 
-            tool_results_collected.append({"tool": name, "content": tool_result})
-            print(f"  [result] {tool_result[:120]}...")
+            messages.append({"role": "assistant", "content": text_response})
+            messages.append({
+                "role": "tool",
+                "content": json.dumps({"name": name, "content": tool_result}),
+            })
 
-    return "Agent could not produce a response."
+            print(f"  [result] {tool_result[:150]}...")
+
+    return text_response or "Agent reached maximum iterations without a final response."

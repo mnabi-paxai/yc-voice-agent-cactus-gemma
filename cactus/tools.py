@@ -1,9 +1,15 @@
-"""Twin Mind — Tools Module
+"""Twin Mind — Cognitive Tools
 
-Defines the tools available to Twin Mind agents for querying,
-searching, and analyzing the markdown knowledge base.
-Each tool has a JSON definition (for Cactus function calling)
-and a Python implementation.
+Seven cognitive tools modeled after how human memory works,
+powered by Gemma 4 function calling on-device.
+
+    overview  — Scan all knowledge — what do I know?
+    focus     — Focus on a specific concept in detail
+    search    — Search for a keyword or idea
+    recognize — Who is this person? What do I know about them?
+    rewind    — What happened on a specific day?
+    reflect   — What patterns do I see about a topic?
+    replay    — What did I see and hear in a session?
 """
 
 import json
@@ -14,8 +20,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "list_articles",
-            "description": "List all articles in the knowledge base with titles and summaries",
+            "name": "overview",
+            "description": "Scan all knowledge — what do I know?",
             "parameters": {
                 "type": "object",
                 "properties": {},
@@ -26,8 +32,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "read_article",
-            "description": "Read the full content of a wiki article by filename",
+            "name": "focus",
+            "description": "Focus on a specific concept in detail",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -43,8 +49,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "search_articles",
-            "description": "Search all articles for a keyword or phrase, returns matching excerpts",
+            "name": "search",
+            "description": "Search for a keyword or idea",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -60,8 +66,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "search_by_person",
-            "description": "Find all knowledge related to a specific person by name",
+            "name": "recognize",
+            "description": "Who is this person? What do I know about them?",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -77,8 +83,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "search_by_date",
-            "description": "Find knowledge from sessions on a specific date",
+            "name": "rewind",
+            "description": "What happened on a specific day?",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -94,8 +100,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "get_patterns",
-            "description": "Detect recurring patterns and themes about a person or topic across all knowledge",
+            "name": "reflect",
+            "description": "What patterns do I see about a topic?",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -111,8 +117,8 @@ TOOL_DEFINITIONS = [
     {
         "type": "function",
         "function": {
-            "name": "read_session_log",
-            "description": "Read the transcript and observations from a capture session",
+            "name": "replay",
+            "description": "What did I see and hear in a session?",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -156,23 +162,23 @@ def _extract_context_lines(content, query, context=2):
     return matches
 
 
-def list_articles(data_dir, **kwargs):
+def overview(data_dir, **kwargs):
     index_path = os.path.join(data_dir, "index.md")
     if not os.path.exists(index_path):
-        return "No articles found. The knowledge base is empty."
+        return "No memories found. The knowledge base is empty."
     with open(index_path, "r") as f:
         return f.read()[:MAX_RESULT_CHARS]
 
 
-def read_article(data_dir, filename, **kwargs):
+def focus(data_dir, filename, **kwargs):
     path = os.path.join(data_dir, filename)
     if not os.path.exists(path):
-        return f"Article '{filename}' not found."
+        return f"Memory '{filename}' not found."
     with open(path, "r") as f:
         return f.read()[:MAX_RESULT_CHARS]
 
 
-def search_articles(data_dir, query, **kwargs):
+def search(data_dir, query, **kwargs):
     results = []
     for filename, content in _read_all_articles(data_dir):
         matches = _extract_context_lines(content, query)
@@ -184,7 +190,7 @@ def search_articles(data_dir, query, **kwargs):
     return "\n\n".join(results)[:MAX_RESULT_CHARS]
 
 
-def search_by_person(data_dir, name, **kwargs):
+def recognize(data_dir, name, **kwargs):
     results = []
     for filename, content in _read_all_articles(data_dir):
         matches = _extract_context_lines(content, name, context=3)
@@ -192,14 +198,13 @@ def search_by_person(data_dir, name, **kwargs):
             excerpts = "\n---\n".join(matches[:3])
             results.append(f"## {filename}\n{excerpts}")
     if not results:
-        return f"No mentions of '{name}' found in the knowledge base."
+        return f"No memories of '{name}' found."
     return "\n\n".join(results)[:MAX_RESULT_CHARS]
 
 
-def search_by_date(data_dir, date, base_dir=None, **kwargs):
+def rewind(data_dir, date, base_dir=None, **kwargs):
     results = []
 
-    # Search session directories for matching dates
     if base_dir:
         sessions_dir = os.path.join(base_dir, "sessions")
         if os.path.exists(sessions_dir):
@@ -215,7 +220,6 @@ def search_by_date(data_dir, date, base_dir=None, **kwargs):
                             f"New articles: {', '.join(a[0] for a in summary.get('new_articles', []))}"
                         )
 
-    # Search articles for date mentions
     for filename, content in _read_all_articles(data_dir):
         if date in content:
             matches = _extract_context_lines(content, date)
@@ -223,11 +227,11 @@ def search_by_date(data_dir, date, base_dir=None, **kwargs):
                 results.append(f"## {filename}\n" + "\n".join(matches[:2]))
 
     if not results:
-        return f"No knowledge found for date '{date}'."
+        return f"No memories found for date '{date}'."
     return "\n\n".join(results)[:MAX_RESULT_CHARS]
 
 
-def get_patterns(data_dir, subject, model=None, **kwargs):
+def reflect(data_dir, subject, model=None, **kwargs):
     """Collect all mentions of a subject, then use Gemma 4 to identify patterns."""
     all_mentions = []
     for filename, content in _read_all_articles(data_dir):
@@ -237,7 +241,7 @@ def get_patterns(data_dir, subject, model=None, **kwargs):
                 all_mentions.append(f"[{filename}] {m}")
 
     if not all_mentions:
-        return f"No mentions of '{subject}' found to analyze patterns."
+        return f"No memories of '{subject}' found to analyze patterns."
 
     mentions_text = "\n\n".join(all_mentions)[:2000]
 
@@ -254,10 +258,10 @@ def get_patterns(data_dir, subject, model=None, **kwargs):
         response = cactus_complete(model, messages, options, None, None)
         return json.loads(response).get("response", mentions_text)
 
-    return f"Mentions of '{subject}':\n\n{mentions_text}"
+    return f"Memories of '{subject}':\n\n{mentions_text}"
 
 
-def read_session_log(base_dir, session_id, **kwargs):
+def replay(base_dir, session_id, **kwargs):
     sessions_dir = os.path.join(base_dir, "sessions")
     if not os.path.exists(sessions_dir):
         return "No sessions found."
@@ -286,28 +290,28 @@ def read_session_log(base_dir, session_id, **kwargs):
 
 
 TOOL_FUNCTIONS = {
-    "list_articles": list_articles,
-    "read_article": read_article,
-    "search_articles": search_articles,
-    "search_by_person": search_by_person,
-    "search_by_date": search_by_date,
-    "get_patterns": get_patterns,
-    "read_session_log": read_session_log,
+    "overview": overview,
+    "focus": focus,
+    "search": search,
+    "recognize": recognize,
+    "rewind": rewind,
+    "reflect": reflect,
+    "replay": replay,
 }
 
 
 def execute_tool(name, arguments, data_dir, base_dir=None, model=None):
-    """Execute a tool by name with the given arguments."""
+    """Execute a cognitive tool by name."""
     if name not in TOOL_FUNCTIONS:
         return f"Unknown tool: {name}"
 
     fn = TOOL_FUNCTIONS[name]
 
-    if name == "read_session_log":
+    if name == "replay":
         return fn(base_dir=base_dir, **arguments)
-    elif name == "search_by_date":
+    elif name == "rewind":
         return fn(data_dir=data_dir, base_dir=base_dir, **arguments)
-    elif name == "get_patterns":
+    elif name == "reflect":
         return fn(data_dir=data_dir, model=model, **arguments)
     else:
         return fn(data_dir=data_dir, **arguments)
