@@ -10,7 +10,7 @@ New on-edge multi-modal advancements such as Gemma and Cactus make this possible
 
 ## 🌟 The Problem
 
-Problem:  Generic LLMs do not know you. Constant prompting is inefficient and exhausting. Most of your life context is a signal hidden inside noise.
+Generic LLMs do not know you. Constant prompting is inefficient and exhausting. Most of your life context is a signal hidden inside noise.
 
 ## 💡 The Solution
 
