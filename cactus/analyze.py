@@ -72,3 +72,4 @@ def summarize_session(transcript, observations):
         "observations": observations,
         "visual_summary": " | ".join(o["observation"] for o in observations),
     }
+

@@ -139,3 +139,4 @@ def extract_from_video(video_path, session_dir, frames_dir):
     cap.release()
     print(f"\nExtracted {len(frame_paths)} frames\n")
     return frame_paths, audio_path
+

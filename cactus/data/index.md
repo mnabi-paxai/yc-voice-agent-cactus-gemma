@@ -17,13 +17,6 @@
 - [Mathematical Reasoning with Language Models](mathematical-reasoning-with-language-models.md) - Techniques for training LLMs on mathematical problem solving using specialized data and RL
 - [Formal Theorem Proving](formal-theorem-proving.md) - Using LLMs to generate machine-verifiable proofs in formal languages like Lean
 
-
-## Learned from Sessions
-
-- [Narrative Paper Publication](narrative-paper-publication.md) — A discussion about the timeline for publishing a narrative paper, with a deadline approaching in two to three weeks.
-- [GRPO](grpo.md) — A concept discussed from class that the speaker is considering for a narrative paper.
-- [Loss Function](loss-function.md) — A specific element of a model or process that the speaker suggests focusing on when discussing GRPO.
-
 ---
 
 This wiki synthesizes concepts from research papers on reinforcement learning, preference optimization, and mathematical reasoning for language models. Each article explains concepts in plain language accessible to junior researchers, summarizes key ideas from the sources, and highlights areas of agreement and disagreement across different approaches.

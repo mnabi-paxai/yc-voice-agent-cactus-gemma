@@ -15,12 +15,12 @@ import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(BASE_DIR, "python", "src"))
+sys.path.insert(0, os.path.join(BASE_DIR, "cactus", "python", "src"))
 
-from cactus import cactus_init, cactus_destroy
+from cactus import cactus_init, cactus_destroy, cactus_index_destroy
 from capture import create_session_dir, record_live, extract_from_video
 from analyze import transcribe_audio, analyze_frames, summarize_session
-from learn import learn_from_session
+from learn import learn_from_session, init_index, build_wiki_index
 
 
 def parse_args():
@@ -35,11 +35,17 @@ def parse_args():
 def main():
     args = parse_args()
 
-    weights_path = os.path.join(BASE_DIR, "weights", "gemma-4-e2b-it")
-    data_dir = os.path.join(BASE_DIR, "data")
+    weights_path = os.path.join(BASE_DIR, "cactus", "weights", "gemma-4-e2b-it")
+    data_dir = os.path.join(BASE_DIR, "Data")
 
     print("Loading Gemma 4 on Cactus...\n")
     model = cactus_init(weights_path, None, False)
+
+    # --- build vector index from existing wiki articles ---
+    print("Building wiki embedding index...")
+    index = init_index(model, data_dir)
+    doc_id = build_wiki_index(model, index, data_dir)
+    print()
 
     session_dir, frames_dir = create_session_dir(BASE_DIR)
     timestamp = os.path.basename(session_dir)
@@ -53,6 +59,7 @@ def main():
 
     if not frame_paths:
         print("No frames captured. Exiting.")
+        cactus_index_destroy(index)
         cactus_destroy(model)
         return
 
@@ -71,16 +78,18 @@ def main():
     for obs in observations:
         print(f"  Frame {obs['frame']}: {obs['observation']}")
 
-    # 5. Learn — extract concepts and generate wiki articles
-    new_articles = learn_from_session(
-        model, transcript, session["visual_summary"], timestamp, data_dir
+    # 5. Learn — extract concepts, score against wiki, generate articles
+    new_articles, doc_id = learn_from_session(
+        model, transcript, session["visual_summary"],
+        timestamp, data_dir, index, doc_id
     )
 
     if new_articles:
         print("New articles added to knowledge base:")
-        for title, filename, summary in new_articles:
+        for title, filename, _ in new_articles:
             print(f"  - {title} ({filename})")
 
+    cactus_index_destroy(index)
     cactus_destroy(model)
     print("\nDone.")
 
