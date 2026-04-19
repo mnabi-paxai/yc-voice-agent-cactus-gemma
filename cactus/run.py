@@ -11,11 +11,12 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(BASE_DIR, "cactus", "python", "src"))
+sys.path.insert(0, os.path.join(BASE_DIR, "python", "src"))
 
 from cactus import cactus_init, cactus_destroy, cactus_index_destroy
 from capture import create_session_dir, record_live, extract_from_video
@@ -35,8 +36,8 @@ def parse_args():
 def main():
     args = parse_args()
 
-    weights_path = os.path.join(BASE_DIR, "cactus", "weights", "gemma-4-e2b-it")
-    data_dir = os.path.join(BASE_DIR, "Data")
+    weights_path = os.path.join(BASE_DIR, "weights", "gemma-4-e4b-it")
+    data_dir = os.path.join(BASE_DIR, "data")
 
     print("Loading Gemma 4 on Cactus...\n")
     model = cactus_init(weights_path, None, False)
@@ -90,6 +91,19 @@ def main():
         print("New articles added to knowledge base:")
         for title, filename, _ in new_articles:
             print(f"  - {title} ({filename})")
+
+    # 6. Save session summary for agent queries
+    summary_path = os.path.join(session_dir, "summary.json")
+    summary_data = {
+        "timestamp": timestamp,
+        "transcript": transcript,
+        "visual_summary": session["visual_summary"],
+        "observations": observations,
+        "new_articles": list(new_articles) if new_articles else [],
+    }
+    with open(summary_path, "w") as f:
+        json.dump(summary_data, f, indent=2)
+    print(f"\nSession summary saved: {summary_path}")
 
     stop_file_watcher(file_watcher)
     cactus_index_destroy(index)
