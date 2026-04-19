@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knowledge Graph Visualization (Confidence > 0.8)</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        #controls {
+            background: #ecf0f1;
+            padding: 15px;
+            text-align: center;
+        }
+        #mynetwork {
+            width: 100%;
+            height: 800px;
+            border: 1px solid #ccc;
+        }
+        #legend {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border: 2px solid #2c3e50;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .legend-item {
+            margin: 5px 0;
+        }
+        .legend-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .filter-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Knowledge Graph: RL & Post-Training (Confidence > 0.8)</h1>
+        <p>8 concepts | 31 relationships</p>
+        <span class="filter-badge">Confidence > 0.8</span>
+    </div>
+
+    <div id="controls">
+        <button onclick="network.fit()">Fit View</button>
+        <button onclick="network.stabilize()">Stabilize</button>
+        <button onclick="togglePhysics()">Toggle Physics</button>
+        <label>
+            <input type="checkbox" id="showLabels" checked onchange="toggleLabels()">
+            Show Labels
+        </label>
+    </div>
+
+    <div id="legend">
+        <h3>Legend</h3>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #e74c3c;"></span>
+            Primary Topic
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #3498db;"></span>
+            Section Concept
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #2ecc71;"></span>
+            Domain Term
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #f39c12;"></span>
+            Emphasized Term
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #9b59b6;"></span>
+            Linked Concept
+        </div>
+    </div>
+
+    <div id="mynetwork"></div>
+
+    <script type="text/javascript">
+        var nodes = new vis.DataSet([{"id": "concept_0", "label": "Reward Modeling", "title": "Reward Modeling\nType: primary_topic\nSource: reward-modeling\nConnections: 8", "color": "#e74c3c", "size": 26}, {"id": "concept_69", "label": "Mathematical Reasoning with Language Models", "title": "Mathematical Reasoning with Language Models\nType: primary_topic\nSource: mathematical-reasoning-with-language-models\nConnections: 4", "color": "#e74c3c", "size": 18}, {"id": "concept_151", "label": "KL Divergence Regularization", "title": "KL Divergence Regularization\nType: primary_topic\nSource: kl-divergence-regularization\nConnections: 9", "color": "#e74c3c", "size": 28}, {"id": "concept_226", "label": "Reinforcement Learning from Human Feedback (RLHF)", "title": "Reinforcement Learning from Human Feedback (RLHF)\nType: primary_topic\nSource: reinforcement-learning-from-human-feedback\nConnections: 12", "color": "#e74c3c", "size": 34}, {"id": "concept_245", "label": "Proximal Policy Optimization (PPO)", "title": "Proximal Policy Optimization (PPO)\nType: primary_topic\nSource: proximal-policy-optimization\nConnections: 8", "color": "#e74c3c", "size": 26}, {"id": "concept_289", "label": "Direct Preference Optimization (DPO)", "title": "Direct Preference Optimization (DPO)\nType: primary_topic\nSource: direct-preference-optimization\nConnections: 8", "color": "#e74c3c", "size": 26}, {"id": "concept_319", "label": "Formal Theorem Proving", "title": "Formal Theorem Proving\nType: primary_topic\nSource: formal-theorem-proving\nConnections: 4", "color": "#e74c3c", "size": 18}, {"id": "concept_389", "label": "Group Relative Policy Optimization (GRPO)", "title": "Group Relative Policy Optimization (GRPO)\nType: primary_topic\nSource: group-relative-policy-optimization\nConnections: 9", "color": "#e74c3c", "size": 28}]);
+        var edges = new vis.DataSet([{"from": "concept_0", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from reward-modeling to reinforcement-learning-from-human-feedback...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_0", "to": "concept_289", "title": "related-to\nConfidence: 0.95\nExplicit link from reward-modeling to direct-preference-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_0", "to": "concept_151", "title": "related-to\nConfidence: 0.95\nExplicit link from reward-modeling to kl-divergence-regularization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_69", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from mathematical-reasoning-with-language-models to reinforcement-learning-from-human-...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_69", "to": "concept_319", "title": "related-to\nConfidence: 0.95\nExplicit link from mathematical-reasoning-with-language-models to formal-theorem-proving...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_69", "to": "concept_389", "title": "related-to\nConfidence: 0.95\nExplicit link from mathematical-reasoning-with-language-models to group-relative-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_151", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from kl-divergence-regularization to reinforcement-learning-from-human-feedback...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_151", "to": "concept_289", "title": "related-to\nConfidence: 0.95\nExplicit link from kl-divergence-regularization to direct-preference-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_151", "to": "concept_245", "title": "related-to\nConfidence: 0.95\nExplicit link from kl-divergence-regularization to proximal-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_151", "to": "concept_389", "title": "related-to\nConfidence: 0.95\nExplicit link from kl-divergence-regularization to group-relative-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_151", "to": "concept_0", "title": "related-to\nConfidence: 0.95\nExplicit link from kl-divergence-regularization to reward-modeling...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_226", "to": "concept_289", "title": "related-to\nConfidence: 0.95\nExplicit link from reinforcement-learning-from-human-feedback to direct-preference-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_226", "to": "concept_245", "title": "related-to\nConfidence: 0.95\nExplicit link from reinforcement-learning-from-human-feedback to proximal-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_226", "to": "concept_0", "title": "related-to\nConfidence: 0.95\nExplicit link from reinforcement-learning-from-human-feedback to reward-modeling...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_226", "to": "concept_151", "title": "related-to\nConfidence: 0.95\nExplicit link from reinforcement-learning-from-human-feedback to kl-divergence-regularization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_226", "to": "concept_389", "title": "related-to\nConfidence: 0.95\nExplicit link from reinforcement-learning-from-human-feedback to group-relative-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_245", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from proximal-policy-optimization to reinforcement-learning-from-human-feedback...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_245", "to": "concept_289", "title": "related-to\nConfidence: 0.95\nExplicit link from proximal-policy-optimization to direct-preference-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_245", "to": "concept_389", "title": "related-to\nConfidence: 0.95\nExplicit link from proximal-policy-optimization to group-relative-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_245", "to": "concept_0", "title": "related-to\nConfidence: 0.95\nExplicit link from proximal-policy-optimization to reward-modeling...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_245", "to": "concept_151", "title": "related-to\nConfidence: 0.95\nExplicit link from proximal-policy-optimization to kl-divergence-regularization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_289", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from direct-preference-optimization to reinforcement-learning-from-human-feedback...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_289", "to": "concept_0", "title": "related-to\nConfidence: 0.95\nExplicit link from direct-preference-optimization to reward-modeling...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_289", "to": "concept_151", "title": "related-to\nConfidence: 0.95\nExplicit link from direct-preference-optimization to kl-divergence-regularization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_319", "to": "concept_69", "title": "related-to\nConfidence: 0.95\nExplicit link from formal-theorem-proving to mathematical-reasoning-with-language-models...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_319", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from formal-theorem-proving to reinforcement-learning-from-human-feedback...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_319", "to": "concept_389", "title": "related-to\nConfidence: 0.95\nExplicit link from formal-theorem-proving to group-relative-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_389", "to": "concept_226", "title": "related-to\nConfidence: 0.95\nExplicit link from group-relative-policy-optimization to reinforcement-learning-from-human-feedback...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_389", "to": "concept_245", "title": "related-to\nConfidence: 0.95\nExplicit link from group-relative-policy-optimization to proximal-policy-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_389", "to": "concept_289", "title": "related-to\nConfidence: 0.95\nExplicit link from group-relative-policy-optimization to direct-preference-optimization...", "arrows": "to", "color": {"opacity": 0.95}}, {"from": "concept_389", "to": "concept_0", "title": "related-to\nConfidence: 0.95\nExplicit link from group-relative-policy-optimization to reward-modeling...", "arrows": "to", "color": {"opacity": 0.95}}]);
+
+        var container = document.getElementById('mynetwork');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+
+        var options = {
+            nodes: {
+                shape: 'dot',
+                font: {
+                    size: 12,
+                    face: 'Arial'
+                },
+                borderWidth: 2,
+                borderWidthSelected: 4
+            },
+            edges: {
+                font: {
+                    size: 10,
+                    align: 'middle'
+                },
+                arrows: {
+                    to: {
+                        enabled: true,
+                        scaleFactor: 0.5
+                    }
+                },
+                smooth: {
+                    type: 'continuous'
+                }
+            },
+            physics: {
+                enabled: true,
+                barnesHut: {
+                    gravitationalConstant: -2000,
+                    centralGravity: 0.3,
+                    springLength: 150,
+                    springConstant: 0.04
+                },
+                stabilization: {
+                    iterations: 150
+                }
+            },
+            interaction: {
+                hover: true,
+                tooltipDelay: 100,
+                navigationButtons: true,
+                keyboard: true
+            }
+        };
+
+        var network = new vis.Network(container, data, options);
+
+        var physicsEnabled = true;
+        function togglePhysics() {
+            physicsEnabled = !physicsEnabled;
+            network.setOptions({physics: {enabled: physicsEnabled}});
+        }
+
+        function toggleLabels() {
+            var showLabels = document.getElementById('showLabels').checked;
+            var allNodes = nodes.get();
+            allNodes.forEach(function(node) {
+                nodes.update({
+                    id: node.id,
+                    label: showLabels ? node.label : ''
+                });
+            });
+        }
+
+        network.on("selectNode", function(params) {
+            console.log('Selected node:', params.nodes);
+        });
+
+        network.on("selectEdge", function(params) {
+            console.log('Selected edge:', params.edges);
+        });
+    </script>
+</body>
+</html>

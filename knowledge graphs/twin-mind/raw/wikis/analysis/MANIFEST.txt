@@ -1,0 +1,230 @@
+================================================================================
+KNOWLEDGE GRAPH EXTRACTION - PROJECT MANIFEST
+================================================================================
+
+Project: Twin Mind - RL/Post-Training Wiki Knowledge Graph
+Generated: 2026-04-19
+Status: COMPLETE ✓
+
+================================================================================
+DELIVERABLES
+================================================================================
+
+1. PRIMARY OUTPUTS (Analysis Results)
+   ├─ knowledge-graph.json (313 KB)
+   │  └─ Complete graph: 432 concepts, 772 relationships, metadata
+   ├─ concepts-list.json (94 KB)
+   │  └─ All concepts with type, source, definition
+   ├─ relationships-list.json (197 KB)
+   │  └─ All relationships with confidence, evidence
+   ├─ graph-analysis.md (6.2 KB)
+   │  └─ Human-readable analysis report with insights
+   ├─ graph-visualization.html (186 KB)
+   │  └─ Interactive network visualization (vis.js)
+   └─ relationship-matrix.md (5.2 KB)
+      └─ Matrix of connections between primary topics
+
+2. DOCUMENTATION
+   ├─ README.md (11 KB)
+   │  └─ Complete documentation, usage examples, insights
+   └─ SUMMARY.md (11 KB)
+      └─ Executive summary, key findings, recommendations
+
+3. SOURCE CODE
+   ├─ extract_knowledge_graph.py (43 KB)
+   │  └─ Main extraction pipeline (4 phases)
+   ├─ generate_relationship_matrix.py (5.4 KB)
+   │  └─ Generate topic relationship matrix
+   └─ explore_graph.py (5.3 KB)
+      └─ Interactive command-line explorer
+
+4. METADATA
+   └─ MANIFEST.txt (this file)
+      └─ Complete project manifest
+
+================================================================================
+EXTRACTION STATISTICS
+================================================================================
+
+Input:
+  - Source Directory: twin-mind/raw/wikis/
+  - Files Processed: 8 markdown files
+  - Total Content: ~60 KB of markdown
+
+Output:
+  - Concepts Extracted: 432
+  - Relationships Mapped: 772
+  - Primary Topics: 8
+  - Clusters Identified: 171
+  - Average Connections: 3.57 per concept
+
+Quality Metrics:
+  - Extraction Methods: 5 (structural, pattern, contextual, hierarchical, manual)
+  - Relationship Types: 3 (discusses, part-of, related-to)
+  - Confidence Range: 0.4 - 0.95
+  - Graph Density: 11.625
+
+================================================================================
+KEY CONCEPTS (Top 10 Most Connected)
+================================================================================
+
+1. Group Relative Policy Optimization (GRPO) - 100 connections
+2. Reward Modeling - 94 connections
+3. KL Divergence Regularization - 90 connections
+4. Formal Theorem Proving - 90 connections
+5. Proximal Policy Optimization (PPO) - 89 connections
+6. Mathematical Reasoning with Language Models - 79 connections
+7. Direct Preference Optimization (DPO) - 71 connections
+8. Reinforcement Learning from Human Feedback (RLHF) - 70 connections
+9. Practical Considerations - 32 connections
+10. Sources Disagreement - 29 connections
+
+================================================================================
+PRIMARY TOPICS (Main Wiki Pages)
+================================================================================
+
+1. Direct Preference Optimization (DPO)
+2. Formal Theorem Proving
+3. Group Relative Policy Optimization (GRPO)
+4. KL Divergence Regularization
+5. Mathematical Reasoning with Language Models
+6. Proximal Policy Optimization (PPO)
+7. Reinforcement Learning from Human Feedback (RLHF)
+8. Reward Modeling
+
+================================================================================
+USAGE INSTRUCTIONS
+================================================================================
+
+View Interactive Visualization:
+  $ open graph-visualization.html
+
+Read Analysis Report:
+  $ cat graph-analysis.md
+  $ cat SUMMARY.md
+
+Explore Graph Interactively:
+  $ python3 explore_graph.py
+
+Query Graph Programmatically:
+  $ python3 -c "import json; g=json.load(open('knowledge-graph.json')); print(len(g['nodes']))"
+
+Regenerate Outputs:
+  $ python3 extract_knowledge_graph.py
+  $ python3 generate_relationship_matrix.py
+
+================================================================================
+FILE VALIDATION
+================================================================================
+
+✓ All JSON files are valid JSON
+✓ All markdown files render correctly
+✓ All Python scripts compile without errors
+✓ HTML visualization loads in browser
+✓ Total output size: ~820 KB
+
+================================================================================
+TECHNICAL DETAILS
+================================================================================
+
+Extraction Pipeline (4 Phases):
+  1. Structural Parsing
+     - Headers (h1-h6) → section concepts
+     - Markdown links → cross-references
+     - Bold/italic text → emphasized terms
+     
+  2. Concept Extraction
+     - 28 domain-specific patterns
+     - Text normalization and deduplication
+     - Definition extraction from context
+     
+  3. Relationship Extraction
+     - Explicit links (markdown references)
+     - Pattern matching (28 relationship patterns)
+     - Contextual (co-occurrence, hierarchy)
+     - Confidence scoring
+     
+  4. Graph Analysis
+     - Connected components
+     - Centrality metrics
+     - Cluster identification
+     - Missing relationship suggestions
+
+Concept Types:
+  - primary_topic: Main wiki page (8 concepts)
+  - section_concept: Header-based (168 concepts)
+  - domain_term: Technical vocabulary (34 concepts)
+  - emphasized_term: Bold text (211 concepts)
+  - linked_concept: Cross-referenced (11 concepts)
+
+Relationship Types:
+  - related-to: Explicit cross-references (4.0%)
+  - discusses: Contextual mentions (68.0%)
+  - part-of: Hierarchical structure (28.0%)
+
+================================================================================
+LIMITATIONS & FUTURE WORK
+================================================================================
+
+Current Scope:
+  ✓ Structural and pattern-based extraction
+  ✓ High coverage of explicit relationships
+  ✓ Multiple output formats
+  ✓ Interactive visualization
+
+Not Included:
+  ✗ Deep semantic analysis (no LLM inference)
+  ✗ Temporal tracking (no version history)
+  ✗ Citation network (papers not integrated)
+  ✗ Performance correlation (no benchmark data)
+
+Potential Enhancements:
+  1. LLM-based semantic extraction
+  2. Citation network integration
+  3. Temporal evolution tracking
+  4. Benchmark performance linking
+  5. Cross-document terminology resolution
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+
+✓ All source files processed successfully
+✓ Comprehensive concept extraction (432 concepts)
+✓ Dense relationship mapping (772 relationships)
+✓ Multiple output formats generated
+✓ Interactive visualization created
+✓ Human-readable reports produced
+✓ Machine-readable JSON outputs
+✓ Reusable extraction scripts
+✓ Complete documentation
+
+Status: ALL CRITERIA MET ✓
+
+================================================================================
+LICENSE & ATTRIBUTION
+================================================================================
+
+This analysis inherits the license of the Twin Mind project.
+
+Extraction Pipeline: Custom implementation
+Visualization: vis.js (MIT License)
+Data Source: Twin Mind Wiki (twin-mind/raw/wikis/)
+
+================================================================================
+CONTACT & SUPPORT
+================================================================================
+
+For questions about this knowledge graph extraction:
+  - Review README.md for detailed documentation
+  - Check SUMMARY.md for executive summary
+  - Run explore_graph.py for interactive exploration
+
+To regenerate or extend:
+  - Modify extract_knowledge_graph.py as needed
+  - Re-run the extraction pipeline
+  - Add new markdown files to source directory
+
+================================================================================
+END OF MANIFEST
+================================================================================

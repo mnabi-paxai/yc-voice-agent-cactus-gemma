@@ -1,0 +1,3458 @@
+[
+  {
+    "id": "concept_0",
+    "label": "Reward Modeling",
+    "type": "primary_topic",
+    "source_file": "reward-modeling",
+    "extraction_method": "title",
+    "definition": "# Reward Modeling\n\n## Overview\n\nReward modeling is the process of learning a function that predicts how good a model's output is, typically from human preference data"
+  },
+  {
+    "id": "concept_1",
+    "label": "Overview",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_2",
+    "label": "Core Approach",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_3",
+    "label": "Preference Data Collection",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_4",
+    "label": "Training Objective",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_5",
+    "label": "Implementation",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_6",
+    "label": "Architecture",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_7",
+    "label": "Training Details",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_8",
+    "label": "Use in RLHF Pipeline",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_9",
+    "label": "Types of Reward Models",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_10",
+    "label": "Outcome Reward Models",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_11",
+    "label": "Process Reward Models",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_12",
+    "label": "Challenges",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_13",
+    "label": "Data Quality",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_14",
+    "label": "Reward Model Limitations",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_15",
+    "label": "Over-Optimization",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_16",
+    "label": "Sources Agreement",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_17",
+    "label": "Sources Disagreement",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_18",
+    "label": "On Necessity of Explicit Reward Models",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_19",
+    "label": "On Reward Model Architecture",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_20",
+    "label": "Formal Verification as Reward",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_21",
+    "label": "Reward Hacking",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_22",
+    "label": "The Problem",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_23",
+    "label": "Mitigation Strategies",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_24",
+    "label": "Practical Considerations",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_25",
+    "label": "When Explicit Reward Models Make Sense",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_26",
+    "label": "When to Consider Alternatives",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_27",
+    "label": "Reward Model Validation",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_28",
+    "label": "Related Concepts",
+    "type": "section_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_29",
+    "label": "Sampling",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_30",
+    "label": "Labeling",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_31",
+    "label": "Dataset",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_32",
+    "label": "Bradley-Terry model",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_33",
+    "label": "Common approach:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_34",
+    "label": "Normalization:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_35",
+    "label": "From the DPO paper:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_36",
+    "label": "Freeze",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_37",
+    "label": "Sample",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_38",
+    "label": "Score",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_39",
+    "label": "Optimize",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_40",
+    "label": "Goedel-Prover uses process rewards:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_41",
+    "label": "Critical factors:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_42",
+    "label": "Known issues:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_43",
+    "label": "The problem:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_44",
+    "label": "Evidence from literature:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_45",
+    "label": "All sources agree that:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_46",
+    "label": "Traditional RLHF (PPO paper, standard practice):",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_47",
+    "label": "DPO position:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_48",
+    "label": "Goedel-Prover position:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_49",
+    "label": "Standard approach:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_50",
+    "label": "Alternative approaches:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_51",
+    "label": "Goedel-Prover introduces a unique approach:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_52",
+    "label": "verifier",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_53",
+    "label": "Advantages:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_54",
+    "label": "Limitations:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_55",
+    "label": "KL regularization",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_56",
+    "label": "Ensemble methods",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_57",
+    "label": "Human-in-the-loop",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_58",
+    "label": "Reward model retraining",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_59",
+    "label": "Early stopping",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_60",
+    "label": "Good for:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_61",
+    "label": "Alternatives like DPO are attractive when:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_62",
+    "label": "Important to check:",
+    "type": "emphasized_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_63",
+    "label": "Reinforcement Learning from Human Feedback",
+    "type": "linked_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_64",
+    "label": "Direct Preference Optimization",
+    "type": "linked_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_65",
+    "label": "Preference Learning",
+    "type": "linked_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_66",
+    "label": "Process Supervision",
+    "type": "linked_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_67",
+    "label": "Outcome Supervision",
+    "type": "linked_concept",
+    "source_file": "reward-modeling",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_69",
+    "label": "Mathematical Reasoning with Language Models",
+    "type": "primary_topic",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "title",
+    "definition": "# Mathematical Reasoning with Language Models\n\n## Overview\n\nMathematical reasoning is one of the most challenging domains for language models, requiring precise logical thinking, multi-step problem solving, and the ability to manipulate abstract symbols"
+  },
+  {
+    "id": "concept_71",
+    "label": "Key Benchmarks",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_72",
+    "label": "Competition-Level Mathematics",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_73",
+    "label": "Formal Mathematics Benchmarks",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_74",
+    "label": "Training Approaches",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_75",
+    "label": "Data Collection and Pre-training",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_76",
+    "label": "Supervised Fine-Tuning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_77",
+    "label": "Reinforcement Learning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_78",
+    "label": "Chain-of-Thought vs Program-of-Thought",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_79",
+    "label": "Chain-of-Thought (CoT)",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_80",
+    "label": "Program-of-Thought (PoT)",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_81",
+    "label": "Tool Use vs Tool-Free Reasoning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_82",
+    "label": "Tool-Integrated Reasoning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_83",
+    "label": "Tool-Free Reasoning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_86",
+    "label": "Approaches",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_87",
+    "label": "Self-Correction",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_88",
+    "label": "Scaffolded Data Synthesis",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_91",
+    "label": "On the Role of RL",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_92",
+    "label": "On Data Sources",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_93",
+    "label": "On Formalization",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_94",
+    "label": "Key Insights from Sources",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_95",
+    "label": "Code Training Improves Math Reasoning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_96",
+    "label": "Scale of Math Pre-training Matters",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_97",
+    "label": "Process Supervision Enables Complex Reasoning",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_98",
+    "label": "Self-Correction is Learnable",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_100",
+    "label": "For Natural Language Math",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_101",
+    "label": "For Formal Theorem Proving",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_102",
+    "label": "Model Size Considerations",
+    "type": "section_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_104",
+    "label": "MATH Dataset (from DPO, DeepSeekMath):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_105",
+    "label": "GSM8K (from all sources):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_106",
+    "label": "miniF2F (from Goedel-Prover):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_107",
+    "label": "PutnamBench (from Goedel-Prover):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_108",
+    "label": "DeepSeekMath approach:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_109",
+    "label": "Collect mathematical web data",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_110",
+    "label": "Pre-train from code model",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_111",
+    "label": "Key insight:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_112",
+    "label": "Standard approach (all sources):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_113",
+    "label": "DeepSeekMath SFT data:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_114",
+    "label": "Goedel-Prover SFT data:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_115",
+    "label": "All sources demonstrate RL improves mathematical reasoning:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_116",
+    "label": "DeepSeekMath results:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_117",
+    "label": "Goedel-Prover results:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_118",
+    "label": "DPO results:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_119",
+    "label": "Characteristics:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_120",
+    "label": "Example:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_121",
+    "label": "DeepSeekMath uses both:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_122",
+    "label": "Capabilities:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_123",
+    "label": "DeepSeekMath performance with tools:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_124",
+    "label": "DeepSeekMath performance without tools:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_125",
+    "label": "Important finding:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_126",
+    "label": "Whole-Proof Generation (Goedel-Prover):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_127",
+    "label": "Proof Search:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_128",
+    "label": "Goedel-Prover combines both:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_129",
+    "label": "Key innovation in Goedel-Prover:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_130",
+    "label": "Results:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_131",
+    "label": "Goedel-Prover introduces two strategies:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_132",
+    "label": "Formal-based scaffolding:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_133",
+    "label": "Informal-based scaffolding:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_134",
+    "label": "Purpose:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_135",
+    "label": "DeepSeekMath and Goedel-Prover emphasize:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_136",
+    "label": "DPO paper demonstrates:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_137",
+    "label": "DeepSeekMath finds:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_138",
+    "label": "Traditional approaches (implicit in comparisons):",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_139",
+    "label": "Goedel-Prover focus:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_140",
+    "label": "DeepSeekMath focus:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_141",
+    "label": "Note:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_142",
+    "label": "DeepSeekMath insight:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_143",
+    "label": "Supporting evidence:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_144",
+    "label": "DeepSeekMath demonstrates:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_145",
+    "label": "Goedel-Prover shows:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_146",
+    "label": "Goedel-Prover demonstrates:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_147",
+    "label": "Effective strategies:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_148",
+    "label": "Findings across sources:",
+    "type": "emphasized_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_149",
+    "label": "Chain-of-Thought Reasoning",
+    "type": "linked_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_150",
+    "label": "Group Relative Policy Optimization",
+    "type": "linked_concept",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_151",
+    "label": "KL Divergence Regularization",
+    "type": "primary_topic",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "title",
+    "definition": "# KL Divergence Regularization\n\n## Overview\n\nKL (Kullback-Leibler) divergence regularization is a critical component of reinforcement learning for language models, used to prevent the policy from deviating too far from a reference policy during optimization"
+  },
+  {
+    "id": "concept_153",
+    "label": "Mathematical Definition",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_154",
+    "label": "Purpose and Motivation",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_155",
+    "label": "Why Regularize?",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_156",
+    "label": "Intuition",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_157",
+    "label": "Use in Different Algorithms",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_162",
+    "label": "Choosing the Reference Policy",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_163",
+    "label": "Common Choices",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_164",
+    "label": "Effects of Reference Choice",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_165",
+    "label": "Hyperparameter Selection (β)",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_166",
+    "label": "Role of β",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_167",
+    "label": "Typical Values",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_168",
+    "label": "Adaptive Methods",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_169",
+    "label": "Measuring KL Divergence",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_170",
+    "label": "Online Estimation",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_172",
+    "label": "Theoretical Justification",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_173",
+    "label": "Constrained Optimization Perspective",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_174",
+    "label": "From DPO Paper",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_177",
+    "label": "On Implementation",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_178",
+    "label": "On Necessity of Explicit Monitoring",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_180",
+    "label": "When KL Penalty is Critical",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_181",
+    "label": "Monitoring Strategy",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_182",
+    "label": "Warning Signs",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_183",
+    "label": "Alternatives and Extensions",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_184",
+    "label": "Trust Region Methods",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_185",
+    "label": "Proximal Penalty",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_186",
+    "label": "Entropy Regularization",
+    "type": "section_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_188",
+    "label": "Without KL regularization:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_189",
+    "label": "With KL regularization:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_190",
+    "label": "Standard formulation:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_191",
+    "label": "Implementation:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_192",
+    "label": "Implicit regularization:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_193",
+    "label": "Two approaches to KL control:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_194",
+    "label": "KL penalty in reward:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_195",
+    "label": "Adaptive KL coefficient:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_196",
+    "label": "Direct KL term in loss:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_197",
+    "label": "Supervised Fine-Tuned (SFT) Model:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_198",
+    "label": "Initial Pre-trained Model:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_199",
+    "label": "Previous Policy Checkpoint:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_200",
+    "label": "Closer reference (e.g., recent checkpoint):",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_201",
+    "label": "Farther reference (e.g., SFT model):",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_202",
+    "label": "Larger β (stronger penalty):",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_203",
+    "label": "Smaller β (weaker penalty):",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_204",
+    "label": "From the sources:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_205",
+    "label": "General guidance:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_206",
+    "label": "Some implementations adapt β:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_207",
+    "label": "From PPO paper:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_208",
+    "label": "During RL training:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_209",
+    "label": "Practical considerations:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_210",
+    "label": "Computational cost:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_211",
+    "label": "Variance:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_212",
+    "label": "PPO/RLHF approaches:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_213",
+    "label": "GRPO approach:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_214",
+    "label": "DPO approach:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_215",
+    "label": "Some approaches:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_216",
+    "label": "Other approaches (e.g., DPO):",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_217",
+    "label": "Essential for:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_218",
+    "label": "Good practice:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_219",
+    "label": "Problems indicated by:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_220",
+    "label": "Solutions:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_221",
+    "label": "TRPO (Trust Region Policy Optimization):",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_222",
+    "label": "PPO's clipping:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_223",
+    "label": "Sometimes added:",
+    "type": "emphasized_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_224",
+    "label": "Proximal Policy Optimization",
+    "type": "linked_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_225",
+    "label": "Policy Gradient Methods",
+    "type": "linked_concept",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_226",
+    "label": "Reinforcement Learning from Human Feedback (RLHF)",
+    "type": "primary_topic",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "title",
+    "definition": "# Reinforcement Learning from Human Feedback (RLHF)\n\n## Overview\n\nReinforcement Learning from Human Feedback (RLHF) is a training paradigm that aligns language models with human preferences by using human-labeled preference data to train a reward model, which then guides policy optimization through reinforcement learning"
+  },
+  {
+    "id": "concept_228",
+    "label": "Core Methodology",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_229",
+    "label": "Key Characteristics",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_230",
+    "label": "Complexity",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_231",
+    "label": "Standard Formulation",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_234",
+    "label": "On Necessity of Explicit Reward Modeling",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_235",
+    "label": "On Complexity vs Performance Trade-offs",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_237",
+    "label": "Implementation Challenges",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_238",
+    "label": "Recent Developments",
+    "type": "section_concept",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_240",
+    "label": "Supervised Fine-Tuning (SFT)",
+    "type": "emphasized_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_241",
+    "label": "RL Optimization",
+    "type": "emphasized_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_242",
+    "label": "DPO paper argues:",
+    "type": "emphasized_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_243",
+    "label": "PPO and other sources treat:",
+    "type": "emphasized_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_244",
+    "label": "DeepSeekMath and Goedel-Prover positions:",
+    "type": "emphasized_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_245",
+    "label": "Proximal Policy Optimization (PPO)",
+    "type": "primary_topic",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "title",
+    "definition": "# Proximal Policy Optimization (PPO)\n\n## Overview\n\nProximal Policy Optimization (PPO) is a policy gradient reinforcement learning algorithm that has become the standard method for the RL phase of RLHF training"
+  },
+  {
+    "id": "concept_247",
+    "label": "Core Mechanism",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_248",
+    "label": "Clipped Surrogate Objective",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_249",
+    "label": "How Clipping Works",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_250",
+    "label": "Use in RLHF",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_251",
+    "label": "RLHF-Specific Formulation",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_252",
+    "label": "Implementation Details",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_253",
+    "label": "From the PPO Paper",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_254",
+    "label": "Hyperparameters",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_255",
+    "label": "Computational Requirements",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_256",
+    "label": "Performance Characteristics",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_257",
+    "label": "Strengths",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_258",
+    "label": "Weaknesses",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_259",
+    "label": "Variants and Extensions",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_260",
+    "label": "In Language Model Training",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_261",
+    "label": "Adaptive KL Penalty",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_264",
+    "label": "On Necessity for Language Models",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_265",
+    "label": "On Performance Claims",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_266",
+    "label": "Comparison with Other Methods",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_267",
+    "label": "vs Trust Region Policy Optimization (TRPO)",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_268",
+    "label": "vs A2C/A3C",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_269",
+    "label": "vs DPO",
+    "type": "section_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_271",
+    "label": "Input",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_272",
+    "label": "Objective",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_273",
+    "label": "Constraint",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_274",
+    "label": "Key components:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_275",
+    "label": "Common settings:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_276",
+    "label": "PPO involves:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_277",
+    "label": "The PPO paper demonstrates:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_278",
+    "label": "In the RLHF context (from DPO paper comparisons):",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_279",
+    "label": "Identified in the DPO paper:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_280",
+    "label": "From the PPO paper itself:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_281",
+    "label": "Standard PPO for RLHF typically:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_282",
+    "label": "DeepSeekMath and Goedel-Prover:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_283",
+    "label": "DPO paper:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_284",
+    "label": "PPO applications in practice:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_285",
+    "label": "PPO advantages:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_286",
+    "label": "TRPO advantages:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_287",
+    "label": "PPO approach:",
+    "type": "emphasized_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_288",
+    "label": "Generalized Advantage Estimation",
+    "type": "linked_concept",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_289",
+    "label": "Direct Preference Optimization (DPO)",
+    "type": "primary_topic",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "title",
+    "definition": "# Direct Preference Optimization (DPO)\n\n## Overview\n\nDirect Preference Optimization (DPO) is a reinforcement learning algorithm that trains language models directly on human preference data without explicitly training a separate reward model"
+  },
+  {
+    "id": "concept_291",
+    "label": "Core Innovation",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_292",
+    "label": "Mathematical Foundation",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_294",
+    "label": "Advantages",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_295",
+    "label": "Simplicity",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_296",
+    "label": "Stability",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_297",
+    "label": "Efficiency",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_298",
+    "label": "Performance",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_299",
+    "label": "According to the DPO Paper",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_300",
+    "label": "Limitations Noted",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_303",
+    "label": "On Whether Reward Modeling Can Be Eliminated",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_304",
+    "label": "On Comparative Performance",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_305",
+    "label": "Theoretical Properties",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_308",
+    "label": "Data Requirements",
+    "type": "section_concept",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_310",
+    "label": "Experimental results show:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_311",
+    "label": "Key finding:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_312",
+    "label": "DPO paper and practice show:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_313",
+    "label": "DPO argues:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_314",
+    "label": "Other approaches (DeepSeekMath, Goedel-Prover) suggest:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_315",
+    "label": "DPO paper claims:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_316",
+    "label": "DeepSeekMath experience:",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_317",
+    "label": "Reward Equivalence",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_318",
+    "label": "Policy Preservation",
+    "type": "emphasized_term",
+    "source_file": "direct-preference-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_319",
+    "label": "Formal Theorem Proving",
+    "type": "primary_topic",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "title",
+    "definition": "# Formal Theorem Proving\n\n## Overview\n\nFormal theorem proving involves constructing machine-verifiable proofs of mathematical statements in formal proof languages like Lean, Isabelle, or Coq"
+  },
+  {
+    "id": "concept_321",
+    "label": "Key Challenges",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_322",
+    "label": "Verification and Precision",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_323",
+    "label": "Long-Horizon Reasoning",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_324",
+    "label": "Search Space Complexity",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_325",
+    "label": "Approaches to Automated Theorem Proving",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_326",
+    "label": "Proof Search Methods",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_327",
+    "label": "Whole-Proof Generation",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_328",
+    "label": "Goedel-Prover Methodology",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_329",
+    "label": "Verifier-Guided Self-Correction",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_330",
+    "label": "Training Data Curation",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_332",
+    "label": "Formal-Based Scaffolding",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h4",
+    "definition": ""
+  },
+  {
+    "id": "concept_333",
+    "label": "Informal-Based Scaffolding",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h4",
+    "definition": ""
+  },
+  {
+    "id": "concept_334",
+    "label": "Training Pipeline",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_335",
+    "label": "Results and Performance",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_336",
+    "label": "Goedel-Prover-V2 Performance",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_337",
+    "label": "Scaling Behavior",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_338",
+    "label": "Verifier as Reward Model",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_340",
+    "label": "Comparison to Learned Reward Models",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_342",
+    "label": "Contrasts with Informal Mathematical Reasoning",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_343",
+    "label": "Formal Theorem Proving (Goedel-Prover)",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_344",
+    "label": "Informal Mathematical Reasoning (DeepSeekMath)",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_346",
+    "label": "When to Use Formal Methods",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_347",
+    "label": "Implementation Considerations",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_348",
+    "label": "Training Strategy",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_349",
+    "label": "Future Directions",
+    "type": "section_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_351",
+    "label": "Requirements:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_352",
+    "label": "Contrast with informal math:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_353",
+    "label": "The challenge:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_354",
+    "label": "Traditional approach:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_355",
+    "label": "Modern LLM approach (Goedel-Prover):",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_356",
+    "label": "Challenges:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_357",
+    "label": "Core innovation:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_358",
+    "label": "Initial Generation",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_359",
+    "label": "Verification",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_360",
+    "label": "Feedback",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_361",
+    "label": "Correction",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_362",
+    "label": "Iterate",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_363",
+    "label": "Components:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_364",
+    "label": "Formalizer Training",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_365",
+    "label": "Proof Generation Training",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_366",
+    "label": "Self-Correction Data",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_367",
+    "label": "Problem:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_368",
+    "label": "Goedel-Prover's solutions:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_369",
+    "label": "Goedel-Prover's multi-stage approach:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_370",
+    "label": "Expert Iteration",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_371",
+    "label": "Reinforcement Learning (GRPO)",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_372",
+    "label": "Model Averaging",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_373",
+    "label": "miniF2F (pass@32):",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_374",
+    "label": "Comparison to prior work:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_375",
+    "label": "PutnamBench:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_376",
+    "label": "Key finding from Goedel-Prover:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_377",
+    "label": "Efficiency:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_378",
+    "label": "Perfect precision within the formal system:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_379",
+    "label": "Process-level feedback:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_380",
+    "label": "Scalability:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_381",
+    "label": "Formal verifier:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_382",
+    "label": "Learned reward model:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_383",
+    "label": "Formal theorem proving is suitable when:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_384",
+    "label": "Key requirements:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_385",
+    "label": "Effective approach (from Goedel-Prover):",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_386",
+    "label": "Potential improvements:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_387",
+    "label": "Open questions:",
+    "type": "emphasized_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_388",
+    "label": "Verifier-Guided Learning",
+    "type": "linked_concept",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "markdown_link",
+    "definition": ""
+  },
+  {
+    "id": "concept_389",
+    "label": "Group Relative Policy Optimization (GRPO)",
+    "type": "primary_topic",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "title",
+    "definition": "# Group Relative Policy Optimization (GRPO)\n\n## Overview\n\nGroup Relative Policy Optimization (GRPO) is a reinforcement learning algorithm introduced in the Goedel-Prover-V2 paper as an efficient and effective alternative to PPO for training language models from preferences"
+  },
+  {
+    "id": "concept_392",
+    "label": "Motivation",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_393",
+    "label": "Problems with Traditional PPO",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_394",
+    "label": "GRPO's Solution",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_395",
+    "label": "Mathematical Formulation",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_397",
+    "label": "Advantage Calculation",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_398",
+    "label": "KL Divergence Handling",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_400",
+    "label": "From Goedel-Prover-V2",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_401",
+    "label": "Key Modifications from Vanilla GRPO",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_403",
+    "label": "Advantages Over PPO",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_404",
+    "label": "Results from Goedel-Prover-V2",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_405",
+    "label": "Outcome vs Process Supervision",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_406",
+    "label": "Outcome Supervision (OS)",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_407",
+    "label": "Process Supervision (PS)",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_409",
+    "label": "vs PPO",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_411",
+    "label": "vs Rejection Sampling Fine-Tuning (RFT)",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_412",
+    "label": "Iterative Training",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h2",
+    "definition": ""
+  },
+  {
+    "id": "concept_415",
+    "label": "On Necessity of RL Framework",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_416",
+    "label": "On Value Function Necessity",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_418",
+    "label": "When to Use GRPO",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_419",
+    "label": "Hyperparameter Choices",
+    "type": "section_concept",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "header_h3",
+    "definition": ""
+  },
+  {
+    "id": "concept_421",
+    "label": "group-based relative rewards",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_422",
+    "label": "group",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_423",
+    "label": "within each group",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_424",
+    "label": "Traditional PPO requires:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_425",
+    "label": "The value function is problematic because:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_426",
+    "label": "By using group normalization:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_427",
+    "label": "Outcome Supervision (reward at end):",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_428",
+    "label": "Process Supervision (reward at each step):",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_429",
+    "label": "Training setup:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_430",
+    "label": "Goedel-Prover introduces:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_431",
+    "label": "Dynamic sampling strategy",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_432",
+    "label": "No group normalization",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_433",
+    "label": "Dynamic sampling from DAPO",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_434",
+    "label": "Incorporating past data",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_435",
+    "label": "Computational efficiency:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_436",
+    "label": "Effectiveness:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_437",
+    "label": "Mathematical reasoning improvements:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_438",
+    "label": "Formal theorem proving:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_439",
+    "label": "In Goedel-Prover:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_440",
+    "label": "GRPO",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_441",
+    "label": "iterative RL",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_442",
+    "label": "Results show:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_443",
+    "label": "Goedel-Prover paper shows:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_444",
+    "label": "GRPO maintains:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_445",
+    "label": "GRPO demonstrates:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_446",
+    "label": "Traditional PPO practitioners:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_447",
+    "label": "GRPO is particularly suitable when:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_448",
+    "label": "Key hyperparameters:",
+    "type": "emphasized_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "bold_text",
+    "definition": ""
+  },
+  {
+    "id": "concept_449",
+    "label": "RLHF",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": "In RLHF pipelines, the reward model serves as a surrogate for human judgment and guides the RL optimization phase"
+  },
+  {
+    "id": "concept_450",
+    "label": "SFT",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": "**Sampling**: Generate multiple outputs (y₁, y₂) for input x from a policy (often the SFT model)\n2"
+  },
+  {
+    "id": "concept_451",
+    "label": "reward model",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": "# Reward Modeling\n\n## Overview\n\nReward modeling is the process of learning a function that predicts how good a model's output is, typically from human preference data"
+  },
+  {
+    "id": "concept_452",
+    "label": "DPO",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_453",
+    "label": "PPO",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_454",
+    "label": "KL penalty",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_455",
+    "label": "KL Divergence",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_456",
+    "label": "preference data",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": "# Reward Modeling\n\n## Overview\n\nReward modeling is the process of learning a function that predicts how good a model's output is, typically from human preference data"
+  },
+  {
+    "id": "concept_457",
+    "label": "theorem proving",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_458",
+    "label": "Language Model",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_459",
+    "label": "pre-training",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_460",
+    "label": "hyperparameter",
+    "type": "domain_term",
+    "source_file": "reward-modeling",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_461",
+    "label": "Policy Optimization",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_462",
+    "label": "Chain-of-Thought",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_463",
+    "label": "CoT",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_464",
+    "label": "Program-of-Thought",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_465",
+    "label": "PoT",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_466",
+    "label": "LLM",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_467",
+    "label": "fine-tuning",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": "Recent work has made significant progress through specialized training approaches combining pre-training, supervised fine-tuning, and reinforcement learning"
+  },
+  {
+    "id": "concept_468",
+    "label": "training data",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": "**Informal-based scaffolding:**\n   - Generate simpler/sub-problems in natural language\n   - Have model solve and formalize them\n   - Filter for correctness and difficulty\n\n**Purpose:** Create training data at appropriate difficulty levels to help model learn incrementally complex reasoning"
+  },
+  {
+    "id": "concept_469",
+    "label": "Mathematical Reasoning",
+    "type": "domain_term",
+    "source_file": "mathematical-reasoning-with-language-models",
+    "extraction_method": "pattern_matching",
+    "definition": "# Mathematical Reasoning with Language Models\n\n## Overview\n\nMathematical reasoning is one of the most challenging domains for language models, requiring precise logical thinking, multi-step problem solving, and the ability to manipulate abstract symbols"
+  },
+  {
+    "id": "concept_470",
+    "label": "TRPO",
+    "type": "domain_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_471",
+    "label": "advantage estimation",
+    "type": "domain_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "pattern_matching",
+    "definition": "**Adaptive KL coefficient:**\n   - Monitor D_KL during training\n   - If D_KL > target: increase β\n   - If D_KL < target: decrease β\n   - Automatically maintain desired KL\n\n### Group Relative Policy Optimization (GRPO)\n\n**Direct KL term in loss:**\n\n```\nL_GRPO = L_PPO - β·D_KL[π_θ || π_ref]\n```\n\nUnlike PPO-style RLHF, GRPO adds KL directly to the loss rather than to the reward, avoiding complications with advantage estimation"
+  },
+  {
+    "id": "concept_472",
+    "label": "mode collapse",
+    "type": "domain_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_473",
+    "label": "reference policy",
+    "type": "domain_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "pattern_matching",
+    "definition": "# KL Divergence Regularization\n\n## Overview\n\nKL (Kullback-Leibler) divergence regularization is a critical component of reinforcement learning for language models, used to prevent the policy from deviating too far from a reference policy during optimization"
+  },
+  {
+    "id": "concept_474",
+    "label": "clipping",
+    "type": "domain_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_475",
+    "label": "Trust Region",
+    "type": "domain_term",
+    "source_file": "kl-divergence-regularization",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_476",
+    "label": "value function",
+    "type": "domain_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_477",
+    "label": "critic",
+    "type": "domain_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_478",
+    "label": "actor-critic",
+    "type": "domain_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_479",
+    "label": "group-based",
+    "type": "domain_term",
+    "source_file": "reinforcement-learning-from-human-feedback",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_480",
+    "label": "GAE",
+    "type": "domain_term",
+    "source_file": "proximal-policy-optimization",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_481",
+    "label": "inference",
+    "type": "domain_term",
+    "source_file": "formal-theorem-proving",
+    "extraction_method": "pattern_matching",
+    "definition": ""
+  },
+  {
+    "id": "concept_482",
+    "label": "group normalization",
+    "type": "domain_term",
+    "source_file": "group-relative-policy-optimization",
+    "extraction_method": "pattern_matching",
+    "definition": "**No group normalization** (as suggested by Dr.GRPO)\n3"
+  }
+]

@@ -1,0 +1,376 @@
+{
+  "metadata": {
+    "source_directory": "/Users/marnabi/Documents/Work/Learning/Twin Mind/twin-mind/raw/wikis",
+    "total_files": 8,
+    "extraction_date": "2026-04-19",
+    "extraction_method": "hybrid_structural_and_pattern",
+    "filtered": true,
+    "min_confidence": 0.85,
+    "original_edges": 772,
+    "original_nodes": 432
+  },
+  "nodes": [
+    {
+      "id": "concept_0",
+      "label": "Reward Modeling",
+      "type": "primary_topic",
+      "source_file": "reward-modeling",
+      "extraction_method": "title",
+      "definition": "# Reward Modeling\n\n## Overview\n\nReward modeling is the process of learning a function that predicts how good a model's output is, typically from human preference data"
+    },
+    {
+      "id": "concept_69",
+      "label": "Mathematical Reasoning with Language Models",
+      "type": "primary_topic",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "title",
+      "definition": "# Mathematical Reasoning with Language Models\n\n## Overview\n\nMathematical reasoning is one of the most challenging domains for language models, requiring precise logical thinking, multi-step problem solving, and the ability to manipulate abstract symbols"
+    },
+    {
+      "id": "concept_151",
+      "label": "KL Divergence Regularization",
+      "type": "primary_topic",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "title",
+      "definition": "# KL Divergence Regularization\n\n## Overview\n\nKL (Kullback-Leibler) divergence regularization is a critical component of reinforcement learning for language models, used to prevent the policy from deviating too far from a reference policy during optimization"
+    },
+    {
+      "id": "concept_226",
+      "label": "Reinforcement Learning from Human Feedback (RLHF)",
+      "type": "primary_topic",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "title",
+      "definition": "# Reinforcement Learning from Human Feedback (RLHF)\n\n## Overview\n\nReinforcement Learning from Human Feedback (RLHF) is a training paradigm that aligns language models with human preferences by using human-labeled preference data to train a reward model, which then guides policy optimization through reinforcement learning"
+    },
+    {
+      "id": "concept_245",
+      "label": "Proximal Policy Optimization (PPO)",
+      "type": "primary_topic",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "title",
+      "definition": "# Proximal Policy Optimization (PPO)\n\n## Overview\n\nProximal Policy Optimization (PPO) is a policy gradient reinforcement learning algorithm that has become the standard method for the RL phase of RLHF training"
+    },
+    {
+      "id": "concept_289",
+      "label": "Direct Preference Optimization (DPO)",
+      "type": "primary_topic",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "title",
+      "definition": "# Direct Preference Optimization (DPO)\n\n## Overview\n\nDirect Preference Optimization (DPO) is a reinforcement learning algorithm that trains language models directly on human preference data without explicitly training a separate reward model"
+    },
+    {
+      "id": "concept_319",
+      "label": "Formal Theorem Proving",
+      "type": "primary_topic",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "title",
+      "definition": "# Formal Theorem Proving\n\n## Overview\n\nFormal theorem proving involves constructing machine-verifiable proofs of mathematical statements in formal proof languages like Lean, Isabelle, or Coq"
+    },
+    {
+      "id": "concept_389",
+      "label": "Group Relative Policy Optimization (GRPO)",
+      "type": "primary_topic",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "title",
+      "definition": "# Group Relative Policy Optimization (GRPO)\n\n## Overview\n\nGroup Relative Policy Optimization (GRPO) is a reinforcement learning algorithm introduced in the Goedel-Prover-V2 paper as an efficient and effective alternative to PPO for training language models from preferences"
+    }
+  ],
+  "edges": [
+    {
+      "id": "rel_0",
+      "source": "concept_0",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reward-modeling to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_1",
+      "source": "concept_0",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reward-modeling to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_2",
+      "source": "concept_0",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reward-modeling to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_3",
+      "source": "concept_69",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from mathematical-reasoning-with-language-models to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_4",
+      "source": "concept_69",
+      "target": "concept_319",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from mathematical-reasoning-with-language-models to formal-theorem-proving",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_5",
+      "source": "concept_69",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from mathematical-reasoning-with-language-models to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_6",
+      "source": "concept_151",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_7",
+      "source": "concept_151",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_8",
+      "source": "concept_151",
+      "target": "concept_245",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to proximal-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_9",
+      "source": "concept_151",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_10",
+      "source": "concept_151",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_11",
+      "source": "concept_226",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_12",
+      "source": "concept_226",
+      "target": "concept_245",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to proximal-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_13",
+      "source": "concept_226",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_14",
+      "source": "concept_226",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_15",
+      "source": "concept_226",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_16",
+      "source": "concept_245",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_17",
+      "source": "concept_245",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_18",
+      "source": "concept_245",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_19",
+      "source": "concept_245",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_20",
+      "source": "concept_245",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_21",
+      "source": "concept_289",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from direct-preference-optimization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_22",
+      "source": "concept_289",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from direct-preference-optimization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_23",
+      "source": "concept_289",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from direct-preference-optimization to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_24",
+      "source": "concept_319",
+      "target": "concept_69",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from formal-theorem-proving to mathematical-reasoning-with-language-models",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_25",
+      "source": "concept_319",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from formal-theorem-proving to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_26",
+      "source": "concept_319",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from formal-theorem-proving to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_27",
+      "source": "concept_389",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_28",
+      "source": "concept_389",
+      "target": "concept_245",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to proximal-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_29",
+      "source": "concept_389",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_30",
+      "source": "concept_389",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to reward-modeling",
+      "extraction_method": "markdown_link"
+    }
+  ],
+  "statistics": {
+    "total_concepts": 8,
+    "total_relationships": 31,
+    "average_degree": 7.75,
+    "max_degree": 12,
+    "node_types": {
+      "primary_topic": 8
+    },
+    "relationship_types": {
+      "related-to": 31
+    },
+    "confidence_distribution": {
+      "0.85-0.90": 0,
+      "0.90-0.95": 31,
+      "0.95-1.00": 0
+    }
+  }
+}

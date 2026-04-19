@@ -1,0 +1,3675 @@
+{
+  "metadata": {
+    "source_directory": "/Users/marnabi/Documents/Work/Learning/Twin Mind/twin-mind/raw/wikis",
+    "total_files": 8,
+    "extraction_date": "2026-04-19",
+    "extraction_method": "hybrid_structural_and_pattern",
+    "filtered": true,
+    "min_confidence": 0.7,
+    "original_edges": 772,
+    "original_nodes": 432
+  },
+  "nodes": [
+    {
+      "id": "concept_0",
+      "label": "Reward Modeling",
+      "type": "primary_topic",
+      "source_file": "reward-modeling",
+      "extraction_method": "title",
+      "definition": "# Reward Modeling\n\n## Overview\n\nReward modeling is the process of learning a function that predicts how good a model's output is, typically from human preference data"
+    },
+    {
+      "id": "concept_1",
+      "label": "Overview",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_2",
+      "label": "Core Approach",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_3",
+      "label": "Preference Data Collection",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_4",
+      "label": "Training Objective",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_5",
+      "label": "Implementation",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_6",
+      "label": "Architecture",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_7",
+      "label": "Training Details",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_8",
+      "label": "Use in RLHF Pipeline",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_9",
+      "label": "Types of Reward Models",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_10",
+      "label": "Outcome Reward Models",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_11",
+      "label": "Process Reward Models",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_12",
+      "label": "Challenges",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_13",
+      "label": "Data Quality",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_14",
+      "label": "Reward Model Limitations",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_15",
+      "label": "Over-Optimization",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_16",
+      "label": "Sources Agreement",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_17",
+      "label": "Sources Disagreement",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_18",
+      "label": "On Necessity of Explicit Reward Models",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_19",
+      "label": "On Reward Model Architecture",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_20",
+      "label": "Formal Verification as Reward",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_21",
+      "label": "Reward Hacking",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_22",
+      "label": "The Problem",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_23",
+      "label": "Mitigation Strategies",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_24",
+      "label": "Practical Considerations",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_25",
+      "label": "When Explicit Reward Models Make Sense",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_26",
+      "label": "When to Consider Alternatives",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_27",
+      "label": "Reward Model Validation",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_28",
+      "label": "Related Concepts",
+      "type": "section_concept",
+      "source_file": "reward-modeling",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_69",
+      "label": "Mathematical Reasoning with Language Models",
+      "type": "primary_topic",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "title",
+      "definition": "# Mathematical Reasoning with Language Models\n\n## Overview\n\nMathematical reasoning is one of the most challenging domains for language models, requiring precise logical thinking, multi-step problem solving, and the ability to manipulate abstract symbols"
+    },
+    {
+      "id": "concept_71",
+      "label": "Key Benchmarks",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_72",
+      "label": "Competition-Level Mathematics",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_73",
+      "label": "Formal Mathematics Benchmarks",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_74",
+      "label": "Training Approaches",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_75",
+      "label": "Data Collection and Pre-training",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_76",
+      "label": "Supervised Fine-Tuning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_77",
+      "label": "Reinforcement Learning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_78",
+      "label": "Chain-of-Thought vs Program-of-Thought",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_79",
+      "label": "Chain-of-Thought (CoT)",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_80",
+      "label": "Program-of-Thought (PoT)",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_81",
+      "label": "Tool Use vs Tool-Free Reasoning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_82",
+      "label": "Tool-Integrated Reasoning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_83",
+      "label": "Tool-Free Reasoning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_86",
+      "label": "Approaches",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_87",
+      "label": "Self-Correction",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_88",
+      "label": "Scaffolded Data Synthesis",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_91",
+      "label": "On the Role of RL",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_92",
+      "label": "On Data Sources",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_93",
+      "label": "On Formalization",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_94",
+      "label": "Key Insights from Sources",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_95",
+      "label": "Code Training Improves Math Reasoning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_96",
+      "label": "Scale of Math Pre-training Matters",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_97",
+      "label": "Process Supervision Enables Complex Reasoning",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_98",
+      "label": "Self-Correction is Learnable",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_100",
+      "label": "For Natural Language Math",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_101",
+      "label": "For Formal Theorem Proving",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_102",
+      "label": "Model Size Considerations",
+      "type": "section_concept",
+      "source_file": "mathematical-reasoning-with-language-models",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_151",
+      "label": "KL Divergence Regularization",
+      "type": "primary_topic",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "title",
+      "definition": "# KL Divergence Regularization\n\n## Overview\n\nKL (Kullback-Leibler) divergence regularization is a critical component of reinforcement learning for language models, used to prevent the policy from deviating too far from a reference policy during optimization"
+    },
+    {
+      "id": "concept_153",
+      "label": "Mathematical Definition",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_154",
+      "label": "Purpose and Motivation",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_155",
+      "label": "Why Regularize?",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_156",
+      "label": "Intuition",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_157",
+      "label": "Use in Different Algorithms",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_162",
+      "label": "Choosing the Reference Policy",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_163",
+      "label": "Common Choices",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_164",
+      "label": "Effects of Reference Choice",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_165",
+      "label": "Hyperparameter Selection (β)",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_166",
+      "label": "Role of β",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_167",
+      "label": "Typical Values",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_168",
+      "label": "Adaptive Methods",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_169",
+      "label": "Measuring KL Divergence",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_170",
+      "label": "Online Estimation",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_172",
+      "label": "Theoretical Justification",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_173",
+      "label": "Constrained Optimization Perspective",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_174",
+      "label": "From DPO Paper",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_177",
+      "label": "On Implementation",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_178",
+      "label": "On Necessity of Explicit Monitoring",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_180",
+      "label": "When KL Penalty is Critical",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_181",
+      "label": "Monitoring Strategy",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_182",
+      "label": "Warning Signs",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_183",
+      "label": "Alternatives and Extensions",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_184",
+      "label": "Trust Region Methods",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_185",
+      "label": "Proximal Penalty",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_186",
+      "label": "Entropy Regularization",
+      "type": "section_concept",
+      "source_file": "kl-divergence-regularization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_226",
+      "label": "Reinforcement Learning from Human Feedback (RLHF)",
+      "type": "primary_topic",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "title",
+      "definition": "# Reinforcement Learning from Human Feedback (RLHF)\n\n## Overview\n\nReinforcement Learning from Human Feedback (RLHF) is a training paradigm that aligns language models with human preferences by using human-labeled preference data to train a reward model, which then guides policy optimization through reinforcement learning"
+    },
+    {
+      "id": "concept_228",
+      "label": "Core Methodology",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_229",
+      "label": "Key Characteristics",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_230",
+      "label": "Complexity",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_231",
+      "label": "Standard Formulation",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_234",
+      "label": "On Necessity of Explicit Reward Modeling",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_235",
+      "label": "On Complexity vs Performance Trade-offs",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_237",
+      "label": "Implementation Challenges",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_238",
+      "label": "Recent Developments",
+      "type": "section_concept",
+      "source_file": "reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_245",
+      "label": "Proximal Policy Optimization (PPO)",
+      "type": "primary_topic",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "title",
+      "definition": "# Proximal Policy Optimization (PPO)\n\n## Overview\n\nProximal Policy Optimization (PPO) is a policy gradient reinforcement learning algorithm that has become the standard method for the RL phase of RLHF training"
+    },
+    {
+      "id": "concept_247",
+      "label": "Core Mechanism",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_248",
+      "label": "Clipped Surrogate Objective",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_249",
+      "label": "How Clipping Works",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_250",
+      "label": "Use in RLHF",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_251",
+      "label": "RLHF-Specific Formulation",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_252",
+      "label": "Implementation Details",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_253",
+      "label": "From the PPO Paper",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_254",
+      "label": "Hyperparameters",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_255",
+      "label": "Computational Requirements",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_256",
+      "label": "Performance Characteristics",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_257",
+      "label": "Strengths",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_258",
+      "label": "Weaknesses",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_259",
+      "label": "Variants and Extensions",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_260",
+      "label": "In Language Model Training",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_261",
+      "label": "Adaptive KL Penalty",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_264",
+      "label": "On Necessity for Language Models",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_265",
+      "label": "On Performance Claims",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_266",
+      "label": "Comparison with Other Methods",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_267",
+      "label": "vs Trust Region Policy Optimization (TRPO)",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_268",
+      "label": "vs A2C/A3C",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_269",
+      "label": "vs DPO",
+      "type": "section_concept",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_272",
+      "label": "Objective",
+      "type": "emphasized_term",
+      "source_file": "proximal-policy-optimization",
+      "extraction_method": "bold_text",
+      "definition": ""
+    },
+    {
+      "id": "concept_289",
+      "label": "Direct Preference Optimization (DPO)",
+      "type": "primary_topic",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "title",
+      "definition": "# Direct Preference Optimization (DPO)\n\n## Overview\n\nDirect Preference Optimization (DPO) is a reinforcement learning algorithm that trains language models directly on human preference data without explicitly training a separate reward model"
+    },
+    {
+      "id": "concept_291",
+      "label": "Core Innovation",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_292",
+      "label": "Mathematical Foundation",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_294",
+      "label": "Advantages",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_295",
+      "label": "Simplicity",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_296",
+      "label": "Stability",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_297",
+      "label": "Efficiency",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_298",
+      "label": "Performance",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_299",
+      "label": "According to the DPO Paper",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_300",
+      "label": "Limitations Noted",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_303",
+      "label": "On Whether Reward Modeling Can Be Eliminated",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_304",
+      "label": "On Comparative Performance",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_305",
+      "label": "Theoretical Properties",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_308",
+      "label": "Data Requirements",
+      "type": "section_concept",
+      "source_file": "direct-preference-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_319",
+      "label": "Formal Theorem Proving",
+      "type": "primary_topic",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "title",
+      "definition": "# Formal Theorem Proving\n\n## Overview\n\nFormal theorem proving involves constructing machine-verifiable proofs of mathematical statements in formal proof languages like Lean, Isabelle, or Coq"
+    },
+    {
+      "id": "concept_321",
+      "label": "Key Challenges",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_322",
+      "label": "Verification and Precision",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_323",
+      "label": "Long-Horizon Reasoning",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_324",
+      "label": "Search Space Complexity",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_325",
+      "label": "Approaches to Automated Theorem Proving",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_326",
+      "label": "Proof Search Methods",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_327",
+      "label": "Whole-Proof Generation",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_328",
+      "label": "Goedel-Prover Methodology",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_329",
+      "label": "Verifier-Guided Self-Correction",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_330",
+      "label": "Training Data Curation",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_332",
+      "label": "Formal-Based Scaffolding",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h4",
+      "definition": ""
+    },
+    {
+      "id": "concept_333",
+      "label": "Informal-Based Scaffolding",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h4",
+      "definition": ""
+    },
+    {
+      "id": "concept_334",
+      "label": "Training Pipeline",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_335",
+      "label": "Results and Performance",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_336",
+      "label": "Goedel-Prover-V2 Performance",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_337",
+      "label": "Scaling Behavior",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_338",
+      "label": "Verifier as Reward Model",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_340",
+      "label": "Comparison to Learned Reward Models",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_342",
+      "label": "Contrasts with Informal Mathematical Reasoning",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_343",
+      "label": "Formal Theorem Proving (Goedel-Prover)",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_344",
+      "label": "Informal Mathematical Reasoning (DeepSeekMath)",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_346",
+      "label": "When to Use Formal Methods",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_347",
+      "label": "Implementation Considerations",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_348",
+      "label": "Training Strategy",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_349",
+      "label": "Future Directions",
+      "type": "section_concept",
+      "source_file": "formal-theorem-proving",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_389",
+      "label": "Group Relative Policy Optimization (GRPO)",
+      "type": "primary_topic",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "title",
+      "definition": "# Group Relative Policy Optimization (GRPO)\n\n## Overview\n\nGroup Relative Policy Optimization (GRPO) is a reinforcement learning algorithm introduced in the Goedel-Prover-V2 paper as an efficient and effective alternative to PPO for training language models from preferences"
+    },
+    {
+      "id": "concept_392",
+      "label": "Motivation",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_393",
+      "label": "Problems with Traditional PPO",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_394",
+      "label": "GRPO's Solution",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_395",
+      "label": "Mathematical Formulation",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_397",
+      "label": "Advantage Calculation",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_398",
+      "label": "KL Divergence Handling",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_400",
+      "label": "From Goedel-Prover-V2",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_401",
+      "label": "Key Modifications from Vanilla GRPO",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_403",
+      "label": "Advantages Over PPO",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_404",
+      "label": "Results from Goedel-Prover-V2",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_405",
+      "label": "Outcome vs Process Supervision",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_406",
+      "label": "Outcome Supervision (OS)",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_407",
+      "label": "Process Supervision (PS)",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_409",
+      "label": "vs PPO",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_411",
+      "label": "vs Rejection Sampling Fine-Tuning (RFT)",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_412",
+      "label": "Iterative Training",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h2",
+      "definition": ""
+    },
+    {
+      "id": "concept_415",
+      "label": "On Necessity of RL Framework",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_416",
+      "label": "On Value Function Necessity",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_418",
+      "label": "When to Use GRPO",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    },
+    {
+      "id": "concept_419",
+      "label": "Hyperparameter Choices",
+      "type": "section_concept",
+      "source_file": "group-relative-policy-optimization",
+      "extraction_method": "header_h3",
+      "definition": ""
+    }
+  ],
+  "edges": [
+    {
+      "id": "rel_0",
+      "source": "concept_0",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reward-modeling to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_1",
+      "source": "concept_0",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reward-modeling to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_2",
+      "source": "concept_0",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reward-modeling to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_3",
+      "source": "concept_69",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from mathematical-reasoning-with-language-models to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_4",
+      "source": "concept_69",
+      "target": "concept_319",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from mathematical-reasoning-with-language-models to formal-theorem-proving",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_5",
+      "source": "concept_69",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from mathematical-reasoning-with-language-models to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_6",
+      "source": "concept_151",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_7",
+      "source": "concept_151",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_8",
+      "source": "concept_151",
+      "target": "concept_245",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to proximal-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_9",
+      "source": "concept_151",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_10",
+      "source": "concept_151",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from kl-divergence-regularization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_11",
+      "source": "concept_226",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_12",
+      "source": "concept_226",
+      "target": "concept_245",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to proximal-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_13",
+      "source": "concept_226",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_14",
+      "source": "concept_226",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_15",
+      "source": "concept_226",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from reinforcement-learning-from-human-feedback to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_16",
+      "source": "concept_245",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_17",
+      "source": "concept_245",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_18",
+      "source": "concept_245",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_19",
+      "source": "concept_245",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_20",
+      "source": "concept_245",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from proximal-policy-optimization to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_21",
+      "source": "concept_289",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from direct-preference-optimization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_22",
+      "source": "concept_289",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from direct-preference-optimization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_23",
+      "source": "concept_289",
+      "target": "concept_151",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from direct-preference-optimization to kl-divergence-regularization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_24",
+      "source": "concept_319",
+      "target": "concept_69",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from formal-theorem-proving to mathematical-reasoning-with-language-models",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_25",
+      "source": "concept_319",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from formal-theorem-proving to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_26",
+      "source": "concept_319",
+      "target": "concept_389",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from formal-theorem-proving to group-relative-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_27",
+      "source": "concept_389",
+      "target": "concept_226",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to reinforcement-learning-from-human-feedback",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_28",
+      "source": "concept_389",
+      "target": "concept_245",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to proximal-policy-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_29",
+      "source": "concept_389",
+      "target": "concept_289",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to direct-preference-optimization",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_30",
+      "source": "concept_389",
+      "target": "concept_0",
+      "relationship_type": "related-to",
+      "confidence": 0.95,
+      "evidence_text": "Explicit link from group-relative-policy-optimization to reward-modeling",
+      "extraction_method": "markdown_link"
+    },
+    {
+      "id": "rel_556",
+      "source": "concept_1",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_557",
+      "source": "concept_2",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_558",
+      "source": "concept_3",
+      "target": "concept_2",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_559",
+      "source": "concept_4",
+      "target": "concept_2",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_560",
+      "source": "concept_5",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_561",
+      "source": "concept_6",
+      "target": "concept_5",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_562",
+      "source": "concept_7",
+      "target": "concept_5",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_563",
+      "source": "concept_8",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_564",
+      "source": "concept_9",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_565",
+      "source": "concept_10",
+      "target": "concept_9",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_566",
+      "source": "concept_11",
+      "target": "concept_9",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_567",
+      "source": "concept_12",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_568",
+      "source": "concept_13",
+      "target": "concept_12",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_569",
+      "source": "concept_14",
+      "target": "concept_12",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_570",
+      "source": "concept_15",
+      "target": "concept_12",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_571",
+      "source": "concept_16",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_572",
+      "source": "concept_17",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_573",
+      "source": "concept_18",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_574",
+      "source": "concept_19",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_575",
+      "source": "concept_20",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_576",
+      "source": "concept_21",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_577",
+      "source": "concept_22",
+      "target": "concept_21",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_578",
+      "source": "concept_23",
+      "target": "concept_21",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_579",
+      "source": "concept_24",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_580",
+      "source": "concept_25",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_581",
+      "source": "concept_26",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_582",
+      "source": "concept_27",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_583",
+      "source": "concept_28",
+      "target": "concept_0",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reward-modeling",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_584",
+      "source": "concept_1",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_585",
+      "source": "concept_71",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_586",
+      "source": "concept_72",
+      "target": "concept_71",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_587",
+      "source": "concept_73",
+      "target": "concept_71",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_588",
+      "source": "concept_74",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_589",
+      "source": "concept_75",
+      "target": "concept_74",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_590",
+      "source": "concept_76",
+      "target": "concept_74",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_591",
+      "source": "concept_77",
+      "target": "concept_74",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_592",
+      "source": "concept_78",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_593",
+      "source": "concept_79",
+      "target": "concept_78",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_594",
+      "source": "concept_80",
+      "target": "concept_78",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_595",
+      "source": "concept_81",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_596",
+      "source": "concept_82",
+      "target": "concept_81",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_597",
+      "source": "concept_83",
+      "target": "concept_81",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_598",
+      "source": "concept_319",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_599",
+      "source": "concept_1",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_600",
+      "source": "concept_86",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_601",
+      "source": "concept_87",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_602",
+      "source": "concept_88",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_603",
+      "source": "concept_16",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_604",
+      "source": "concept_17",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_605",
+      "source": "concept_91",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_606",
+      "source": "concept_92",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_607",
+      "source": "concept_93",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_608",
+      "source": "concept_94",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_609",
+      "source": "concept_95",
+      "target": "concept_94",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_610",
+      "source": "concept_96",
+      "target": "concept_94",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_611",
+      "source": "concept_97",
+      "target": "concept_94",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_612",
+      "source": "concept_98",
+      "target": "concept_94",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_613",
+      "source": "concept_24",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_614",
+      "source": "concept_100",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_615",
+      "source": "concept_101",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_616",
+      "source": "concept_102",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_617",
+      "source": "concept_28",
+      "target": "concept_69",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in mathematical-reasoning-with-language-models",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_618",
+      "source": "concept_1",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_619",
+      "source": "concept_153",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_620",
+      "source": "concept_154",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_621",
+      "source": "concept_155",
+      "target": "concept_154",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_622",
+      "source": "concept_156",
+      "target": "concept_154",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_623",
+      "source": "concept_157",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_624",
+      "source": "concept_226",
+      "target": "concept_157",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_625",
+      "source": "concept_289",
+      "target": "concept_157",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_626",
+      "source": "concept_245",
+      "target": "concept_157",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_627",
+      "source": "concept_389",
+      "target": "concept_157",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_628",
+      "source": "concept_162",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_629",
+      "source": "concept_163",
+      "target": "concept_162",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_630",
+      "source": "concept_164",
+      "target": "concept_162",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_631",
+      "source": "concept_165",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_632",
+      "source": "concept_166",
+      "target": "concept_165",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_633",
+      "source": "concept_167",
+      "target": "concept_165",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_634",
+      "source": "concept_168",
+      "target": "concept_165",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_635",
+      "source": "concept_169",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_636",
+      "source": "concept_170",
+      "target": "concept_169",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_637",
+      "source": "concept_12",
+      "target": "concept_169",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_638",
+      "source": "concept_172",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_639",
+      "source": "concept_173",
+      "target": "concept_172",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_640",
+      "source": "concept_174",
+      "target": "concept_172",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_641",
+      "source": "concept_16",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_642",
+      "source": "concept_17",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_643",
+      "source": "concept_177",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_644",
+      "source": "concept_178",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_645",
+      "source": "concept_24",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_646",
+      "source": "concept_180",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_647",
+      "source": "concept_181",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_648",
+      "source": "concept_182",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_649",
+      "source": "concept_183",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_650",
+      "source": "concept_184",
+      "target": "concept_183",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_651",
+      "source": "concept_185",
+      "target": "concept_183",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_652",
+      "source": "concept_186",
+      "target": "concept_183",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_653",
+      "source": "concept_28",
+      "target": "concept_151",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in kl-divergence-regularization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_654",
+      "source": "concept_1",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_655",
+      "source": "concept_228",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_656",
+      "source": "concept_229",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_657",
+      "source": "concept_230",
+      "target": "concept_229",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_658",
+      "source": "concept_231",
+      "target": "concept_229",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_659",
+      "source": "concept_16",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_660",
+      "source": "concept_17",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_661",
+      "source": "concept_234",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_662",
+      "source": "concept_235",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_663",
+      "source": "concept_24",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_664",
+      "source": "concept_237",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_665",
+      "source": "concept_238",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_666",
+      "source": "concept_28",
+      "target": "concept_226",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in reinforcement-learning-from-human-feedback",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_667",
+      "source": "concept_1",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_668",
+      "source": "concept_247",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_669",
+      "source": "concept_248",
+      "target": "concept_247",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_670",
+      "source": "concept_249",
+      "target": "concept_247",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_671",
+      "source": "concept_250",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_672",
+      "source": "concept_251",
+      "target": "concept_250",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_673",
+      "source": "concept_252",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_674",
+      "source": "concept_253",
+      "target": "concept_252",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_675",
+      "source": "concept_254",
+      "target": "concept_252",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_676",
+      "source": "concept_255",
+      "target": "concept_252",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_677",
+      "source": "concept_256",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_678",
+      "source": "concept_257",
+      "target": "concept_256",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_679",
+      "source": "concept_258",
+      "target": "concept_256",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_680",
+      "source": "concept_259",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_681",
+      "source": "concept_260",
+      "target": "concept_259",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_682",
+      "source": "concept_261",
+      "target": "concept_259",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_683",
+      "source": "concept_16",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_684",
+      "source": "concept_17",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_685",
+      "source": "concept_264",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_686",
+      "source": "concept_265",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_687",
+      "source": "concept_266",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_688",
+      "source": "concept_267",
+      "target": "concept_266",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_689",
+      "source": "concept_268",
+      "target": "concept_266",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_690",
+      "source": "concept_269",
+      "target": "concept_266",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_691",
+      "source": "concept_28",
+      "target": "concept_245",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in proximal-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_692",
+      "source": "concept_1",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_693",
+      "source": "concept_291",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_694",
+      "source": "concept_292",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_695",
+      "source": "concept_4",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_696",
+      "source": "concept_294",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_697",
+      "source": "concept_295",
+      "target": "concept_294",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_698",
+      "source": "concept_296",
+      "target": "concept_294",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_699",
+      "source": "concept_297",
+      "target": "concept_294",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_700",
+      "source": "concept_298",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_701",
+      "source": "concept_299",
+      "target": "concept_298",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_702",
+      "source": "concept_300",
+      "target": "concept_298",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_703",
+      "source": "concept_16",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_704",
+      "source": "concept_17",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_705",
+      "source": "concept_303",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_706",
+      "source": "concept_304",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_707",
+      "source": "concept_305",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_708",
+      "source": "concept_24",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_709",
+      "source": "concept_254",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_710",
+      "source": "concept_308",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_711",
+      "source": "concept_28",
+      "target": "concept_289",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in direct-preference-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_712",
+      "source": "concept_321",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_713",
+      "source": "concept_322",
+      "target": "concept_321",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_714",
+      "source": "concept_323",
+      "target": "concept_321",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_715",
+      "source": "concept_324",
+      "target": "concept_321",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_716",
+      "source": "concept_325",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_717",
+      "source": "concept_326",
+      "target": "concept_325",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_718",
+      "source": "concept_327",
+      "target": "concept_325",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_719",
+      "source": "concept_328",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_720",
+      "source": "concept_329",
+      "target": "concept_328",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_721",
+      "source": "concept_330",
+      "target": "concept_328",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_722",
+      "source": "concept_88",
+      "target": "concept_328",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_723",
+      "source": "concept_332",
+      "target": "concept_88",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_724",
+      "source": "concept_333",
+      "target": "concept_88",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_725",
+      "source": "concept_334",
+      "target": "concept_328",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_726",
+      "source": "concept_335",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_727",
+      "source": "concept_336",
+      "target": "concept_335",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_728",
+      "source": "concept_337",
+      "target": "concept_335",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_729",
+      "source": "concept_338",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_730",
+      "source": "concept_294",
+      "target": "concept_338",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_731",
+      "source": "concept_340",
+      "target": "concept_338",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_732",
+      "source": "concept_16",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_733",
+      "source": "concept_342",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_734",
+      "source": "concept_343",
+      "target": "concept_342",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_735",
+      "source": "concept_344",
+      "target": "concept_342",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_736",
+      "source": "concept_24",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_737",
+      "source": "concept_346",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_738",
+      "source": "concept_347",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_739",
+      "source": "concept_348",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_740",
+      "source": "concept_349",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_741",
+      "source": "concept_28",
+      "target": "concept_319",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in formal-theorem-proving",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_742",
+      "source": "concept_1",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_743",
+      "source": "concept_291",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_744",
+      "source": "concept_392",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_745",
+      "source": "concept_393",
+      "target": "concept_392",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_746",
+      "source": "concept_394",
+      "target": "concept_392",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_747",
+      "source": "concept_395",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_748",
+      "source": "concept_272",
+      "target": "concept_395",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_749",
+      "source": "concept_397",
+      "target": "concept_395",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_750",
+      "source": "concept_398",
+      "target": "concept_395",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_751",
+      "source": "concept_252",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_752",
+      "source": "concept_400",
+      "target": "concept_252",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_753",
+      "source": "concept_401",
+      "target": "concept_252",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_754",
+      "source": "concept_298",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_755",
+      "source": "concept_403",
+      "target": "concept_298",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_756",
+      "source": "concept_404",
+      "target": "concept_298",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_757",
+      "source": "concept_405",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_758",
+      "source": "concept_406",
+      "target": "concept_405",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_759",
+      "source": "concept_407",
+      "target": "concept_405",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_760",
+      "source": "concept_266",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_761",
+      "source": "concept_409",
+      "target": "concept_266",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_762",
+      "source": "concept_411",
+      "target": "concept_266",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_763",
+      "source": "concept_412",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_764",
+      "source": "concept_16",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_765",
+      "source": "concept_17",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_766",
+      "source": "concept_415",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_767",
+      "source": "concept_416",
+      "target": "concept_17",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_768",
+      "source": "concept_24",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_769",
+      "source": "concept_418",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_770",
+      "source": "concept_419",
+      "target": "concept_24",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    },
+    {
+      "id": "rel_771",
+      "source": "concept_28",
+      "target": "concept_389",
+      "relationship_type": "part-of",
+      "confidence": 0.8,
+      "evidence_text": "Header structure in group-relative-policy-optimization",
+      "extraction_method": "header_hierarchy"
+    }
+  ],
+  "statistics": {
+    "total_concepts": 177,
+    "total_relationships": 247,
+    "average_degree": 2.79,
+    "max_degree": 25,
+    "node_types": {
+      "primary_topic": 8,
+      "section_concept": 168,
+      "emphasized_term": 1
+    },
+    "relationship_types": {
+      "related-to": 31,
+      "part-of": 216
+    },
+    "confidence_distribution": {
+      "0.85-0.90": 216,
+      "0.90-0.95": 31,
+      "0.95-1.00": 0
+    }
+  }
+}

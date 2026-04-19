@@ -1,0 +1,246 @@
+{
+  "main": {
+    "id": "d86cd0681dc33746",
+    "type": "split",
+    "children": [
+      {
+        "id": "7217db3a397fbd15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f72a55ba1a771a16",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/dpo.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "dpo"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5ab46758e2dfb45a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "83adc6c4bc35d7e1",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "890d740dbcb9286e",
+    "type": "split",
+    "children": [
+      {
+        "id": "4552cc56b6b2f445",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b629070cad3d0967",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "72135fc456a27dee",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3cb83baee99356e0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b01d47cf9729c470",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6e8880e09e7dc37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c3dd0f584945ff4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "5523e1fe810e9614",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "7105c4b2d01b47ef",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4191e28e4336810a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "aedf362be46decea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "83adc6c4bc35d7e1",
+  "lastOpenFiles": [
+    "raw/wikis/analysis/graph-visualization-filtered-0.7.html",
+    "raw/wikis/analysis/knowledge-graph-filtered-0.7.json",
+    "raw/wikis/analysis/graph-visualization-filtered-0.8.html",
+    "raw/wikis/analysis/knowledge-graph-filtered-0.8.json",
+    "raw/wikis/analysis/__pycache__/filter_graph_by_confidence.cpython-312.pyc",
+    "raw/wikis/analysis/graph-visualization-filtered-0.85.html",
+    "raw/wikis/analysis/knowledge-graph-filtered-0.85.json",
+    "raw/wikis/analysis/filter_graph_by_confidence.py",
+    "raw/wikis/analysis/README-DETAILED.md",
+    "all_papers_knowledge_graph.html",
+    "raw/wikis/analysis/MANIFEST.txt",
+    "all_papers_kg/index_store.json",
+    "raw/wikis/analysis/SUMMARY.md",
+    "raw/wikis/analysis/README.md",
+    "raw/wikis/analysis/relationship-matrix.md",
+    "raw/wikis/analysis/graph-analysis.md",
+    "README_LLAMAINDEX_GEMINI_FAST_KG.md",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/sample_data/logo2.png",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/sample_data/grace_hopper.jpg",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/sample_data/Minduka_Present_Blue_Pack.png",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/zoom_to_rect_large.png",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/zoom_to_rect.svg",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/zoom_to_rect.png",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/zoom_to_rect-symbolic.svg",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/subplots_large.png",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/subplots.svg",
+    "venv/lib/python3.12/site-packages/matplotlib/mpl-data/images/subplots.png",
+    "raw/wikis/formal-theorem-proving.md",
+    "raw/wikis/direct-preference-optimization.md",
+    "raw/wikis/proximal-policy-optimization.md",
+    "raw/wikis/group-relative-policy-optimization.md",
+    "Welcome.md",
+    "raw/wikis/index.md",
+    "raw/wikis/kl-divergence-regularization.md",
+    "raw/wikis/mathematical-reasoning-with-language-models.md",
+    "raw/wikis/reward-modeling.md",
+    "raw/wikis/reinforcement-learning-from-human-feedback.md",
+    "QUICK_START_NEO4J.md",
+    "NEO4J_SETUP.md",
+    "venv/lib/python3.12/site-packages/llama_index/core/tools/tool_spec/load_and_search/README.md",
+    "venv/lib/python3.12/site-packages/llama_index/core/agent/react/templates/system_header_template.md",
+    "venv/lib/python3.12/site-packages/llama_index/core/indices/tree/README.md",
+    "venv/lib/python3.12/site-packages/llama_index/core/indices/list/README.md",
+    "venv/lib/python3.12/site-packages/llama_index/core/indices/keyword_table/README.md",
+    "venv/lib/python3.12/site-packages/openai/resources/webhooks/api.md",
+    "venv/lib/python3.12/site-packages/openai/resources/responses/api.md"
+  ]
+}

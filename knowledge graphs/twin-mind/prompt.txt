@@ -1,0 +1,20 @@
+I have a folder of raw sources on different aspect of RL and post training and formal methods for automatic math prooving from differnet sources.
+The files are in '/Users/marnabi/Documents/Work/Learning/Twin Mind/twin-mind/raw'
+
+Read all of these and build me a structured wiki organized by
+concept — not by source or by person.
+
+For each major concept, write a standalone article that:
+
+- Explains what the concept is in plain language
+- Summarizes what the key ideas and evidence say
+- Notes where these sources agree
+- Specifically flags where they disagree and why
+- Links to related articles within the wiki
+
+Also create an index.md file that lists every article in the wiki
+with a one-line description.
+
+Write everything so a junior researcher can understand it.
+
+Leave the output in '/Users/marnabi/Documents/Work/Learning/Twin Mind/twin-mind/raw/wikis'

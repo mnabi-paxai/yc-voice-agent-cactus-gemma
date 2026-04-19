@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "Deepseekmath", "label": "Deepseekmath", "shape": "dot", "title": "Deepseekmath"}, {"color": "#97c2fc", "id": "Seq2seq generation", "label": "Seq2seq generation", "shape": "dot", "title": "Seq2seq generation"}, {"color": "#97c2fc", "id": "Advantage", "label": "Advantage", "shape": "dot", "title": "Advantage"}, {"color": "#97c2fc", "id": "Deepseekmath-instruct 7b", "label": "Deepseekmath-instruct 7b", "shape": "dot", "title": "Deepseekmath-instruct 7b"}, {"color": "#97c2fc", "id": "Code training", "label": "Code training", "shape": "dot", "title": "Code training"}, {"color": "#97c2fc", "id": "120.2b tokens", "label": "120.2b tokens", "shape": "dot", "title": "120.2b tokens"}, {"color": "#97c2fc", "id": "Group relative policy optimization", "label": "Group relative policy optimization", "shape": "dot", "title": "Group relative policy optimization"}, {"color": "#97c2fc", "id": "Deepseekmath 7b", "label": "Deepseekmath 7b", "shape": "dot", "title": "Deepseekmath 7b"}, {"color": "#97c2fc", "id": "Group reward scores", "label": "Group reward scores", "shape": "dot", "title": "Group reward scores"}, {"color": "#97c2fc", "id": "Ppo", "label": "Ppo", "shape": "dot", "title": "Ppo"}, {"color": "#97c2fc", "id": "Chain-of-thought prompting", "label": "Chain-of-thought prompting", "shape": "dot", "title": "Chain-of-thought prompting"}, {"color": "#97c2fc", "id": "Reasoning", "label": "Reasoning", "shape": "dot", "title": "Reasoning"}, {"color": "#97c2fc", "id": "Speculative decoding", "label": "Speculative decoding", "shape": "dot", "title": "Speculative decoding"}, {"color": "#97c2fc", "id": "Redpajama", "label": "Redpajama", "shape": "dot", "title": "Redpajama"}, {"color": "#97c2fc", "id": "Deepseek-coder-base-v1.5 7b", "label": "Deepseek-coder-base-v1.5 7b", "shape": "dot", "title": "Deepseek-coder-base-v1.5 7b"}, {"color": "#97c2fc", "id": "Mistral 7b", "label": "Mistral 7b", "shape": "dot", "title": "Mistral 7b"}, {"color": "#97c2fc", "id": "Generalized advantage estimation", "label": "Generalized advantage estimation", "shape": "dot", "title": "Generalized advantage estimation"}, {"color": "#97c2fc", "id": "Deepseekmath-rl 7b", "label": "Deepseekmath-rl 7b", "shape": "dot", "title": "Deepseekmath-rl 7b"}, {"color": "#97c2fc", "id": "Open-source models", "label": "Open-source models", "shape": "dot", "title": "Open-source models"}, {"color": "#97c2fc", "id": "Openai", "label": "Openai", "shape": "dot", "title": "Openai"}, {"color": "#97c2fc", "id": "Group scores", "label": "Group scores", "shape": "dot", "title": "Group scores"}, {"color": "#97c2fc", "id": "Open dataset", "label": "Open dataset", "shape": "dot", "title": "Open dataset"}, {"color": "#97c2fc", "id": "Deepseekmath corpus", "label": "Deepseekmath corpus", "shape": "dot", "title": "Deepseekmath corpus"}, {"color": "#97c2fc", "id": "Deepseekmath-base 7b", "label": "Deepseekmath-base 7b", "shape": "dot", "title": "Deepseekmath-base 7b"}, {"color": "#97c2fc", "id": "Value model", "label": "Value model", "shape": "dot", "title": "Value model"}, {"color": "#97c2fc", "id": "Llemma 34b", "label": "Llemma 34b", "shape": "dot", "title": "Llemma 34b"}, {"color": "#97c2fc", "id": "Gpt4 technical report", "label": "Gpt4 technical report", "shape": "dot", "title": "Gpt4 technical report"}, {"color": "#97c2fc", "id": "Mathematical reasoning", "label": "Mathematical reasoning", "shape": "dot", "title": "Mathematical reasoning"}, {"color": "#97c2fc", "id": "Grpo", "label": "Grpo", "shape": "dot", "title": "Grpo"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "Deepseekmath 7b", "label": "Continues pre-training", "to": "Deepseek-coder-base-v1.5 7b"}, {"arrows": "to", "from": "Deepseekmath 7b", "label": "Introduces", "to": "Group relative policy optimization"}, {"arrows": "to", "from": "Deepseekmath corpus", "label": "Size", "to": "120.2b tokens"}, {"arrows": "to", "from": "Deepseekmath-base 7b", "label": "Outperforms", "to": "Llemma 34b"}, {"arrows": "to", "from": "Deepseekmath-base 7b", "label": "Outperforms", "to": "Mistral 7b"}, {"arrows": "to", "from": "Deepseekmath-rl 7b", "label": "Surpasses", "to": "Open-source models"}, {"arrows": "to", "from": "Deepseekmath-rl 7b", "label": "Outperforms", "to": "Deepseekmath-instruct 7b"}, {"arrows": "to", "from": "Grpo", "label": "Foregoes", "to": "Value model"}, {"arrows": "to", "from": "Grpo", "label": "Estimates baseline from", "to": "Group scores"}, {"arrows": "to", "from": "Grpo", "label": "Variant of", "to": "Ppo"}, {"arrows": "to", "from": "Grpo", "label": "Uses", "to": "Group reward scores"}, {"arrows": "to", "from": "Code training", "label": "Improves", "to": "Mathematical reasoning"}, {"arrows": "to", "from": "Deepseekmath", "label": "Outperforms", "to": "Open-source models"}, {"arrows": "to", "from": "Openai", "label": "Published", "to": "Gpt4 technical report"}, {"arrows": "to", "from": "Redpajama", "label": "Is", "to": "Open dataset"}, {"arrows": "to", "from": "Chain-of-thought prompting", "label": "Elicits", "to": "Reasoning"}, {"arrows": "to", "from": "Speculative decoding", "label": "Accelerates", "to": "Seq2seq generation"}, {"arrows": "to", "from": "Advantage", "label": "Computed", "to": "Generalized advantage estimation"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
