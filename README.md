@@ -2,7 +2,11 @@
 
 ![Banner Name](images/banner.png)
 
-> A personalized AI that learns from your daily life—capturing video, audio, and context to build a living knowledge base that grows with you.
+We are building a digital twin of your mind that learns from your daily life.
+It starts with your existing knowledge: markdown wikis or knowledge graph that captures what you already know as the starting state. Then, as you work, learn, and interact each day, your digital twin updates continuously.
+
+New on-edge multi-modal advancements such as Gemma and Cactus make this possible. They can process video and voice in real time and capture what matters even in noisy, messy environments, whether you are coding, researching, or managing three kids.
+
 
 ## 🌟 The Problem
 
@@ -15,7 +19,7 @@ Generic LLMs don't know you. They require constant prompting, can't learn from y
 - **Learns continuously**: Captures and processes video, audio, and context from your daily life
 - **Runs on-device**: Uses Gemma 4 on Cactus for real-time multimodal processing
 - **Builds a living knowledge base**: Automatically extracts concepts and generates structured wiki articles
-- **BPruning through Cosine Similarities and Engagement Scores**
+- **Pruning through Cosine Similarities and Engagement Scores**
 - **Understands you**: Every interaction becomes more relevant, useful, and personal
 
 Whether you're coding, researching, or managing three kids, Twin Mind captures what matters even in noisy, messy environments.
