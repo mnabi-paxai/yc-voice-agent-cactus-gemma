@@ -11,7 +11,6 @@ Usage:
 """
 
 import argparse
-import json
 import os
 import sys
 
@@ -21,7 +20,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, "cactus", "python", "src"))
 from cactus import cactus_init, cactus_destroy, cactus_index_destroy
 from capture import create_session_dir, record_live, extract_from_video
 from analyze import transcribe_audio, analyze_frames, summarize_session
-from learn import learn_from_session, init_index, build_wiki_index
+from learn import learn_from_session, init_index, build_wiki_index, start_file_watcher, stop_file_watcher
 
 
 def parse_args():
@@ -47,6 +46,8 @@ def main():
     index = init_index(model, data_dir)
     doc_id = build_wiki_index(model, index, data_dir)
     print()
+
+    file_watcher = start_file_watcher(data_dir)
 
     session_dir, frames_dir = create_session_dir(BASE_DIR)
     timestamp = os.path.basename(session_dir)
@@ -90,19 +91,7 @@ def main():
         for title, filename, _ in new_articles:
             print(f"  - {title} ({filename})")
 
-    # 6. Save session summary for agent queries
-    summary_path = os.path.join(session_dir, "summary.json")
-    summary_data = {
-        "timestamp": timestamp,
-        "transcript": transcript,
-        "visual_summary": session["visual_summary"],
-        "observations": observations,
-        "new_articles": list(new_articles) if new_articles else [],
-    }
-    with open(summary_path, "w") as f:
-        json.dump(summary_data, f, indent=2)
-    print(f"\nSession summary saved: {summary_path}")
-
+    stop_file_watcher(file_watcher)
     cactus_index_destroy(index)
     cactus_destroy(model)
     print("\nDone.")

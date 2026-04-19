@@ -4,18 +4,37 @@ Extracts concepts from a session's transcript and visual observations,
 generates structured wiki articles, and updates the knowledge index.
 
 Embedding pipeline:
-  - Each markdown file is chunked by ## section
-  - Each section is embedded via cactus_embed and stored in cactus_index
-  - Retrieval uses composite scoring:
-      score = α * semantic_sim + γ * cognitive_engagement + δ * recency_decay
+  - One embedding per markdown file (title + overview section)
+  - Stored in cactus_index with filename as metadata
+
+Retrieval + scoring:
+  1. semantic_sim used as a threshold gate — trim candidates below threshold
+  2. Remaining candidates ranked by engagement_score:
+       engagement_score = sum(exp(-0.1 * days) for each session that accessed this file)
+     More recently and frequently accessed = higher score
+  3. Access log persisted in vector_index/access_log.json
+
+File watcher:
+  - Monitors Data/ directory for user opens/edits of .md files
+  - Logs to access_log.json so engagement score reflects real user interest
 """
 
 import json
 import math
 import os
 import re
+import threading
 from datetime import datetime
 from pathlib import Path
+
+try:
+    from watchdog.observers import Observer
+    from watchdog.events import FileSystemEventHandler
+    _WATCHDOG_AVAILABLE = True
+except ImportError:
+    _WATCHDOG_AVAILABLE = False
+
+_ATIME_POLL_INTERVAL = 5  # seconds between atime checks
 
 from cactus import (
     cactus_complete,
@@ -27,8 +46,8 @@ from cactus import (
     cactus_index_compact,
 )
 
-# Reference text for cognitive engagement scoring
-_FOCUSED_REF = "focused engaged attentive concentrated deep work thinking"
+SIM_THRESHOLD = 0.3   # minimum semantic similarity to be a candidate
+ENGAGEMENT_DECAY = 0.1  # recency decay rate per day
 
 
 # ---------------------------------------------------------------------------
@@ -74,7 +93,7 @@ def _save_indexed(data_dir, indexed):
 
 
 def build_wiki_index(model, index, data_dir):
-    """Embed only new wiki articles — skips files already in the index log."""
+    """Embed wiki articles by section. Skips already-indexed files."""
     indexed = _load_indexed(data_dir)
     doc_id = sum(indexed.values()) if indexed else 0
 
@@ -83,14 +102,10 @@ def build_wiki_index(model, index, data_dir):
         if filepath.name == "index.md" or filepath.name in indexed:
             continue
         text = filepath.read_text()
-        timestamp = _parse_timestamp(text)
         start_id = doc_id
         for section in chunk_markdown(text):
             emb = cactus_embed(model, section, True)
-            cactus_index_add(
-                index, [doc_id], [section], [emb],
-                [f"{filepath.name}|{timestamp}"]
-            )
+            cactus_index_add(index, [doc_id], [section], [emb], [filepath.name])
             doc_id += 1
         indexed[filepath.name] = doc_id - start_id
         new_count += 1
@@ -105,16 +120,13 @@ def build_wiki_index(model, index, data_dir):
 
 
 def add_article_to_index(model, index, doc_id, filepath, timestamp, data_dir):
-    """Embed a newly written article, add to index, and update the indexed log."""
+    """Embed a newly written article by section and update the indexed log."""
     filename = os.path.basename(filepath)
     text = Path(filepath).read_text()
     start_id = doc_id
     for section in chunk_markdown(text):
         emb = cactus_embed(model, section, True)
-        cactus_index_add(
-            index, [doc_id], [section], [emb],
-            [f"{filename}|{timestamp}"]
-        )
+        cactus_index_add(index, [doc_id], [section], [emb], [filename])
         doc_id += 1
     cactus_index_compact(index)
     indexed = _load_indexed(data_dir)
@@ -124,66 +136,195 @@ def add_article_to_index(model, index, doc_id, filepath, timestamp, data_dir):
 
 
 # ---------------------------------------------------------------------------
-# Scoring
+# Engagement log (replaces separate cognitive + recency signals)
 # ---------------------------------------------------------------------------
 
-def _cognitive_score(model, visual_summary):
+def _access_log_path(data_dir):
+    return os.path.join(data_dir, "vector_index", "access_log.json")
+
+
+def _load_access_log(data_dir):
+    """Load {filename: [date_str, ...]} access history."""
+    path = _access_log_path(data_dir)
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+
+def _save_access_log(data_dir, log):
+    with open(_access_log_path(data_dir), "w") as f:
+        json.dump(log, f)
+
+
+def _log_access(data_dir, filenames, timestamp):
+    """Record that these files were accessed in a session."""
+    log = _load_access_log(data_dir)
+    date_str = timestamp[:10]
+    for filename in filenames:
+        log.setdefault(filename, []).append(date_str)
+    _save_access_log(data_dir, log)
+
+
+def _engagement_score(access_dates, decay=ENGAGEMENT_DECAY):
     """
-    Cosine similarity between the session's visual summary and a focused
-    reference embedding. Both vectors are already unit-normalised by cactus_embed.
+    Time-decayed access frequency:
+      score = sum(exp(-decay * days_since_access)) for each session access
+    More recent and more frequent access = higher score.
+    Files never accessed score 0.
     """
-    ref_emb = cactus_embed(model, _FOCUSED_REF, True)
-    vis_emb = cactus_embed(model, visual_summary or "neutral", True)
-    return float(sum(a * b for a, b in zip(ref_emb, vis_emb)))
+    if not access_dates:
+        return 0.0
+    today = datetime.now()
+    score = 0.0
+    for date_str in access_dates:
+        try:
+            d = datetime.strptime(date_str[:10], "%Y-%m-%d")
+            days = max(0, (today - d).days)
+            score += math.exp(-decay * days)
+        except Exception:
+            pass
+    return score
 
 
-def _recency_score(timestamp_str, decay=0.1):
-    """Exponential decay: score = exp(-decay * days_since_session)."""
-    try:
-        session_date = datetime.strptime(timestamp_str[:10], "%Y-%m-%d")
-        days = max(0, (datetime.now() - session_date).days)
-        return math.exp(-decay * days)
-    except Exception:
-        return 0.5
+# ---------------------------------------------------------------------------
+# File watcher — tracks direct user interaction with markdown files
+# ---------------------------------------------------------------------------
+
+class _AtimePoller(threading.Thread):
+    """Polls st_atime of every .md file to detect reads (opens) and writes."""
+
+    def __init__(self, data_dir):
+        super().__init__(daemon=True)
+        self._data_dir = data_dir
+        self._stop = threading.Event()
+        self._lock = threading.Lock()
+        self._atimes = self._snapshot()
+
+    def _snapshot(self):
+        result = {}
+        for f in Path(self._data_dir).glob("*.md"):
+            if f.name == "index.md":
+                continue
+            try:
+                result[f.name] = os.stat(f).st_atime
+            except OSError:
+                pass
+        return result
+
+    def run(self):
+        while not self._stop.wait(_ATIME_POLL_INTERVAL):
+            current = self._snapshot()
+            today = datetime.now().strftime("%Y-%m-%d")
+            accessed = [
+                name for name, atime in current.items()
+                if atime != self._atimes.get(name)
+            ]
+            if accessed:
+                with self._lock:
+                    _log_access(self._data_dir, accessed, today)
+            self._atimes = current
+
+    def stop(self):
+        self._stop.set()
+        self.join()
 
 
-def retrieve_and_score(model, index, query_text, visual_summary,
-                       top_k=5, alpha=0.6, gamma=0.2, delta=0.2):
+if _WATCHDOG_AVAILABLE:
+    class _MarkdownWriteHandler(FileSystemEventHandler):
+        """Catches saves/writes instantly via FSEvents (complements atime polling for reads)."""
+
+        def __init__(self, data_dir, lock):
+            self._data_dir = data_dir
+            self._lock = lock
+
+        def on_modified(self, event):
+            if event.is_directory:
+                return
+            path = event.src_path
+            if not path.endswith(".md") or os.path.basename(path) == "index.md":
+                return
+            filename = os.path.basename(path)
+            today = datetime.now().strftime("%Y-%m-%d")
+            with self._lock:
+                _log_access(self._data_dir, [filename], today)
+
+
+def start_file_watcher(data_dir):
     """
-    Retrieve relevant wiki sections and apply composite scoring:
-      score = α * semantic_sim + γ * cognitive_engagement + δ * recency_decay
-    Returns deduplicated list of top-k results sorted by score.
+    Start two complementary watchers:
+      - AtimePoller: detects reads (opens) by polling st_atime every 5 s
+      - FSEvents observer (watchdog): detects writes instantly
+    Returns (poller, observer) tuple; observer may be None if watchdog unavailable.
+    """
+    poller = _AtimePoller(data_dir)
+    poller.start()
+
+    observer = None
+    if _WATCHDOG_AVAILABLE:
+        lock = poller._lock
+        handler = _MarkdownWriteHandler(data_dir, lock)
+        observer = Observer()
+        observer.schedule(handler, data_dir, recursive=False)
+        observer.start()
+        print("  File watcher started (reads via atime polling + writes via FSEvents)")
+    else:
+        print("  File watcher started (reads via atime polling; install watchdog for instant write detection)")
+
+    return poller, observer
+
+
+def stop_file_watcher(watcher):
+    """Stop watchers returned by start_file_watcher."""
+    if watcher is None:
+        return
+    poller, observer = watcher
+    poller.stop()
+    if observer is not None:
+        observer.stop()
+        observer.join()
+
+
+# ---------------------------------------------------------------------------
+# Retrieval + scoring
+# ---------------------------------------------------------------------------
+
+def retrieve_and_score(model, index, query_text, data_dir,
+                       top_k=5, sim_threshold=SIM_THRESHOLD):
+    """
+    1. Embed query and retrieve candidate files from vector index
+    2. Trim candidates below sim_threshold
+    3. Rank remaining by engagement_score (time-decayed access frequency)
+    4. Log accessed files for future scoring
     """
     query_emb = cactus_embed(model, query_text, True)
     raw = cactus_index_query(index, query_emb, json.dumps({"top_k": top_k * 3}))
     results = json.loads(raw)["results"]
 
-    cog = _cognitive_score(model, visual_summary)
+    access_log = _load_access_log(data_dir)
 
-    scored = []
+    # collect best semantic_sim per file across all matching sections
+    best_per_file = {}
     for r in results:
+        if r["score"] < sim_threshold:
+            continue
         doc_raw = json.loads(cactus_index_get(index, [r["id"]]))["results"][0]
-        meta = doc_raw.get("metadata", "unknown|unknown")
-        parts = (meta + "|unknown").split("|")
-        filename, timestamp = parts[0], parts[1]
-        rec = _recency_score(timestamp)
-        final = alpha * r["score"] + gamma * cog + delta * rec
-        scored.append({
-            "filename": filename,
-            "text": doc_raw["document"],
-            "semantic_sim": r["score"],
-            "cognitive": cog,
-            "recency": rec,
-            "score": final,
-        })
+        filename = doc_raw.get("metadata", "unknown")
+        if filename not in best_per_file or r["score"] > best_per_file[filename]["semantic_sim"]:
+            best_per_file[filename] = {
+                "filename": filename,
+                "text": doc_raw["document"],
+                "semantic_sim": r["score"],
+                "engagement": _engagement_score(access_log.get(filename, [])),
+            }
 
-    # deduplicate by filename, keep highest score per file
-    seen = {}
-    for s in sorted(scored, key=lambda x: x["score"], reverse=True):
-        if s["filename"] not in seen:
-            seen[s["filename"]] = s
+    ranked = sorted(best_per_file.values(), key=lambda x: x["engagement"], reverse=True)[:top_k]
 
-    return list(seen.values())[:top_k]
+    # log this retrieval as an access event
+    today = datetime.now().strftime("%Y-%m-%d")
+    _log_access(data_dir, [r["filename"] for r in ranked], today)
+
+    return ranked
 
 
 # ---------------------------------------------------------------------------
@@ -315,12 +456,11 @@ def learn_from_session(model, transcript, visual_summary, timestamp, data_dir,
     # Use scored retrieval from vector index if available
     if index and transcript:
         print("Retrieving related wiki articles...")
-        scored = retrieve_and_score(model, index, transcript, visual_summary)
+        scored = retrieve_and_score(model, index, transcript, data_dir)
         existing_articles = [(s["filename"].replace(".md", "").replace("-", " ").title(),
                               s["filename"]) for s in scored]
         for s in scored:
-            print(f"  {s['filename']}  score={s['score']:.3f} "
-                  f"(sem={s['semantic_sim']:.2f} cog={s['cognitive']:.2f} rec={s['recency']:.2f})")
+            print(f"  {s['filename']}  sim={s['semantic_sim']:.2f}  engagement={s['engagement']:.3f}")
         print()
     else:
         _, existing_articles = read_existing_index(data_dir)
@@ -345,6 +485,7 @@ def learn_from_session(model, transcript, visual_summary, timestamp, data_dir,
         if index:
             filepath = os.path.join(data_dir, filename)
             doc_id = add_article_to_index(model, index, doc_id, filepath, timestamp, data_dir)
+            _log_access(data_dir, [filename], timestamp)
 
     if new_entries:
         update_index(data_dir, new_entries)
